@@ -4,7 +4,7 @@ flask-cors==4.0.0
 python-dotenv==1.0.0
 
 # Gen AI / LLM Integration (Person 1)
-google-genai==0.2.0
+google-genai>=1.73.0
 openai==1.6.1
 langchain==0.1.0
 langchain-google-genai==0.0.6

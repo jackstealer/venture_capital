@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture Scout - AI-Powered Investment Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="white"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="brand-name">Venture Scout</span>
+            </div>
+            <div class="nav-links">
+                <a href="#analysis" class="nav-link active">Analysis</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#insights" class="nav-link">Insights</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">AI-Powered Investment Intelligence</h1>
+            <p class="hero-subtitle">Analyze startups and repositories with advanced AI to make data-driven investment decisions</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Analysis Section -->
+        <section class="analysis-section" id="analysis">
+            <div class="section-header">
+                <h2>Repository Analysis</h2>
+                <p>Enter a GitHub repository URL to receive comprehensive AI-powered investment insights</p>
+            </div>
+            
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="repoUrl" 
+                    placeholder="https://github.com/owner/repository"
+                    class="repo-input"
+                >
+                <button onclick="analyzeRepository()" class="analyze-btn">
+                    <span class="btn-text">Analyze Repository</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading-state" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Analyzing repository with AI...</p>
+            <div class="loading-steps">
+                <div class="step">Fetching repository data</div>
+                <div class="step">Running AI analysis</div>
+                <div class="step">Calculating investment score</div>
+                <div class="step">Generating insights</div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="results-container" style="display: none;">
+            <!-- Score Overview -->
+            <div class="score-overview">
+                <div class="score-card-main">
+                    <div class="score-label">Investment Score</div>
+                    <div class="score-value" id="finalScore">0</div>
+                    <div class="score-grade" id="grade">-</div>
+                </div>
+                <div class="score-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Recommendation</span>
+                        <span class="detail-value" id="recommendation">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Risk Level</span>
+                        <span class="detail-value" id="riskLevel">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Market Timing</span>
+                        <span class="detail-value" id="marketTiming">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repository Information -->
+            <div class="info-card">
+                <h3 class="card-title">Repository Overview</h3>
+                <div id="repoInfo" class="card-content"></div>
+            </div>
+
+            <!-- Analysis Grid -->
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3 class="card-title">AI Analysis</h3>
+                    <div id="aiAnalysis" class="card-content"></div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3 class="card-title">Sentiment Analysis</h3>
+                    <div id="sentimentAnalysis" class="card-content"></div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3 class="card-title">Trend Analysis</h3>
+                    <div id="trendAnalysis" class="card-content"></div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3 class="card-title">Score Breakdown</h3>
+                    <div id="scoreBreakdown" class="card-content"></div>
+                </div>
+            </div>
+
+            <!-- Investment Memo -->
+            <div class="memo-card">
+                <h3 class="card-title">Investment Memo</h3>
+                <div id="investmentMemo" class="memo-content"></div>
+            </div>
+
+            <!-- Key Insights -->
+            <div class="insights-card">
+                <h3 class="card-title">Key Insights</h3>
+                <div id="keyInsights" class="insights-content"></div>
+            </div>
+
+            <!-- Risks & Opportunities -->
+            <div class="risk-opp-grid">
+                <div class="risk-card">
+                    <h3 class="card-title">Risk Assessment</h3>
+                    <div id="risks" class="card-content"></div>
+                </div>
+                <div class="opp-card">
+                    <h3 class="card-title">Opportunities</h3>
+                    <div id="opportunities" class="card-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Section -->
+        <section class="trending-section" id="portfolio">
+            <div class="section-header">
+                <h2>Trending Repositories</h2>
+                <button onclick="loadTrending()" class="secondary-btn">Refresh</button>
+            </div>
+            <div id="trendingProjects" class="trending-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-name">Venture Scout</span>
+                <p>AI-Powered Investment Intelligence Platform</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#analysis">Analysis</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#insights">Insights</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Venture Scout. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="ai_visualizer.js"></script>
+</body>
+</html>

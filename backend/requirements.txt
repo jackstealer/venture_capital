@@ -1,0 +1,30 @@
+# Core Framework
+flask==3.0.0
+flask-cors==4.0.0
+python-dotenv==1.0.0
+
+# Gen AI / LLM Integration (Person 1)
+google-genai==0.2.0
+openai==1.6.1
+langchain==0.1.0
+langchain-google-genai==0.0.6
+
+# NLP & Sentiment Analysis (Person 2)
+nltk==3.8.1
+textblob==0.17.1
+transformers==4.36.0
+
+# Data Processing
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# Database
+pymongo==4.6.1
+
+# API & Web
+fastapi==0.109.0
+uvicorn==0.27.0
+pydantic==2.5.3
+
+# Utilities
+python-dateutil==2.8.2

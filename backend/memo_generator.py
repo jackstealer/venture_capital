@@ -1,27 +1,12 @@
-# PERSON 3: AI-Powered Investment Memo Generator
-# Generates professional investment memos using AI
-
 from llm_client import LLMClient
 from datetime import datetime
 
 class MemoGenerator:
-    """
-    Generates professional VC investment memos using AI
-    """
     
     def __init__(self):
         self.llm = LLMClient(provider='gemini')
     
     def generate_memo(self, repo_data, analysis_data, scoring_result):
-        """
-        Generate complete investment memo
-        Args:
-            repo_data (dict): Repository data
-            analysis_data (dict): Combined analysis
-            scoring_result (dict): Scoring results
-        Returns:
-            dict: Investment memo
-        """
         print(f"📝 Generating investment memo for {repo_data.get('repo_name')}...")
         
         # Generate each section

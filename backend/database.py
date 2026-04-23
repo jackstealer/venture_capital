@@ -1,13 +1,8 @@
-# PERSON 1: Database Operations
-# Handles all database interactions (using JSON file for simplicity)
-
 import json
 import os
 from datetime import datetime
 
-class Database:
-    """Simple JSON-based database for storing project data"""
-    
+class Database:  
     def __init__(self, db_file='../data/projects.json'):
         self.db_file = db_file
         self._ensure_db_exists()
@@ -20,13 +15,6 @@ class Database:
                 json.dump([], f)
     
     def save_project(self, project_data):
-        """
-        Save or update a project in the database
-        Args:
-            project_data (dict): Project information to save
-        Returns:
-            bool: Success status
-        """
         try:
             projects = self._read_db()
             
@@ -56,13 +44,6 @@ class Database:
             return False
     
     def get_project(self, project_id):
-        """
-        Retrieve a specific project by ID
-        Args:
-            project_id (str): Project identifier
-        Returns:
-            dict: Project data or None
-        """
         projects = self._read_db()
         for project in projects:
             if str(project.get('id')) == str(project_id):
@@ -70,11 +51,6 @@ class Database:
         return None
     
     def get_all_projects(self):
-        """
-        Get all projects from database
-        Returns:
-            list: All projects
-        """
         return self._read_db()
     
     def delete_project(self, project_id):
@@ -97,8 +73,6 @@ class Database:
         with open(self.db_file, 'w') as f:
             json.dump(data, f, indent=2)
 
-# For MongoDB implementation (optional upgrade):
-"""
 from pymongo import MongoClient
 import os
 
@@ -121,4 +95,3 @@ class Database:
     
     def get_all_projects(self):
         return list(self.projects.find())
-"""

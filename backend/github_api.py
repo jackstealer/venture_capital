@@ -1,13 +1,8 @@
-# PERSON 2: GitHub API Integration
-# Handles all GitHub API interactions
-
 import requests
 from datetime import datetime, timedelta
 from config import Config
 
-class GitHubAPI:
-    """GitHub API wrapper for fetching repository data"""
-    
+class GitHubAPI:    
     def __init__(self):
         self.base_url = Config.GITHUB_API_BASE
         self.headers = {
@@ -19,16 +14,6 @@ class GitHubAPI:
             self.headers['Authorization'] = f'token {Config.GITHUB_TOKEN}'
     
     def get_trending_repos(self, limit=10, language=None, sort='stars', since=None):
-        """
-        Fetch trending repositories from GitHub
-        Args:
-            limit (int): Number of repos to fetch
-            language (str): Filter by programming language
-            sort (str): Sort by 'stars', 'forks', or 'updated'
-            since (str): Date threshold (YYYY-MM-DD)
-        Returns:
-            list: Repository data
-        """
         # Build query
         query_parts = []
         
@@ -63,14 +48,6 @@ class GitHubAPI:
             return []
     
     def get_repo_details(self, owner, repo_name):
-        """
-        Get detailed information about a specific repository
-        Args:
-            owner (str): Repository owner
-            repo_name (str): Repository name
-        Returns:
-            dict: Repository details
-        """
         url = f'{self.base_url}/repos/{owner}/{repo_name}'
         
         try:

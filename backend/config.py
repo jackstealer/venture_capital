@@ -1,6 +1,3 @@
-# PERSON 1: Configuration Settings
-# Central configuration file for the application
-
 import os
 from dotenv import load_dotenv
 

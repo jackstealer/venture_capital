@@ -1,6 +1,3 @@
-# PERSON 3: Main Flask Application
-# Integrates all components: Data Collection, AI Analysis, Scoring, Recommendations
-
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from database import Database
@@ -21,13 +18,13 @@ CORS(app)  # Enable CORS for frontend communication
 
 # Initialize all components
 db = Database()
-collector = DataCollector()  # Person 2
-ai_analyzer = AIAnalyzer()  # Person 1
-sentiment_analyzer = SentimentAnalyzer()  # Person 2
-trend_analyzer = TrendAnalyzer()  # Person 2
-scoring_engine = ScoringEngine()  # Person 3
-recommendation_engine = RecommendationEngine()  # Person 3
-memo_generator = MemoGenerator()  # Person 3
+collector = DataCollector()  
+ai_analyzer = AIAnalyzer()  
+sentiment_analyzer = SentimentAnalyzer()  
+trend_analyzer = TrendAnalyzer()  
+scoring_engine = ScoringEngine()  
+recommendation_engine = RecommendationEngine()  
+memo_generator = MemoGenerator() 
 
 @app.route('/')
 def home():
@@ -47,10 +44,6 @@ def home():
 
 @app.route('/api/trending', methods=['GET'])
 def get_trending():
-    """
-    Fetch trending GitHub repositories
-    Person 2's module
-    """
     try:
         limit = request.args.get('limit', 10, type=int)
         
@@ -75,10 +68,6 @@ def get_trending():
 
 @app.route('/api/analyze', methods=['POST'])
 def analyze_project():
-    """
-    Quick AI analysis of a repository
-    Person 1's AI module
-    """
     try:
         data = request.json
         repo_url = data.get('repo_url')
@@ -117,10 +106,6 @@ def analyze_project():
 
 @app.route('/api/full-analysis', methods=['POST'])
 def full_analysis():
-    """
-    Complete Gen AI analysis pipeline
-    Integrates all team members' work
-    """
     try:
         data = request.json
         repo_url = data.get('repo_url')
@@ -133,37 +118,29 @@ def full_analysis():
         
         print(f"\n🚀 Starting FULL AI ANALYSIS for: {repo_url}\n")
         
-        # Step 1: Fetch repository data (Person 2)
         print("📊 Step 1: Fetching repository data...")
         repo_data = collector.fetch_repo_details(repo_url)
-        
-        # Step 2: AI Analysis (Person 1)
+     
         print("🤖 Step 2: Running AI analysis...")
         ai_analysis = ai_analyzer.analyze_repository(repo_data)
         
-        # Step 3: Sentiment Analysis (Person 2)
         print("💭 Step 3: Analyzing sentiment...")
         sentiment = sentiment_analyzer.analyze_repository(repo_data)
         
-        # Step 4: Trend Analysis (Person 2)
         print("📈 Step 4: Detecting trends...")
         trends = trend_analyzer.analyze_trends(repo_data)
         
-        # Step 5: Scoring (Person 3)
         print("🎯 Step 5: Calculating scores...")
         scoring = scoring_engine.calculate_score(repo_data, ai_analysis, trends, sentiment)
         
-        # Step 6: Generate Recommendation (Person 3)
         print("💡 Step 6: Generating recommendation...")
         recommendation = recommendation_engine.generate_recommendation(
             repo_data, ai_analysis, trends, sentiment
         )
         
-        # Step 7: Generate Investment Memo (Person 3)
         print("📝 Step 7: Creating investment memo...")
         memo = memo_generator.generate_memo(repo_data, ai_analysis, scoring)
         
-        # Compile complete analysis
         complete_analysis = {
             "repo_info": {
                 "name": repo_data.get('repo_name'),
@@ -201,10 +178,6 @@ def full_analysis():
 
 @app.route('/api/compare', methods=['POST'])
 def compare_projects():
-    """
-    Compare two projects using AI
-    Person 3's comparison engine
-    """
     try:
         data = request.json
         repo_url1 = data.get('repo_url1')

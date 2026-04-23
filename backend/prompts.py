@@ -1,4 +1,4 @@
-# PERSON 1: Prompt Engineering Templates
+# Prompt Engineering Templates
 # Collection of carefully crafted prompts for different analysis tasks
 
 class PromptTemplates:

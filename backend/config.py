@@ -12,7 +12,7 @@ class Config:
     
     # Database
     DATABASE_FILE = os.getenv('DATABASE_FILE', '../data/projects.json')
-    MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017/')
+    MONGO_URI = os.getenv('MONGO_URI', '')
     
     # API Settings
     GITHUB_API_BASE = 'https://api.github.com'
@@ -41,6 +41,10 @@ class Config:
         if not Config.GITHUB_TOKEN:
             print("ℹ️  Info: GITHUB_TOKEN not set. Using lower rate limits.")
             print("   Generate token at: https://github.com/settings/tokens")
+        
+        if not Config.MONGO_URI:
+            print("⚠️  Warning: MONGO_URI not set. Database writes will fail unless local JSON file is used or env var provided.")
+            print("   Add MONGO_URI to backend/.env or your environment variables.")
         
         return True
 

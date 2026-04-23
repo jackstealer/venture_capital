@@ -3,7 +3,7 @@ from prompts import PromptTemplates
 import json
 
 class AIAnalyzer:
-     def __init__(self, provider='gemini'):
+    def __init__(self, provider='gemini'):
         self.llm = LLMClient(provider=provider)
         self.prompts = PromptTemplates()
     
@@ -18,7 +18,7 @@ class AIAnalyzer:
         
         # Add metadata
         analysis['analyzed_by'] = 'AI'
-        analysis['model'] = 'gemini-pro'
+        analysis['model'] = 'gemini-2.5-flash'
         analysis['repo_name'] = repo_data.get('repo_name')
         
         return analysis

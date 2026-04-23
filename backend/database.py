@@ -75,10 +75,13 @@ class Database:
 
 from pymongo import MongoClient
 import os
+from config import Config
 
 class Database:
     def __init__(self):
-        mongo_uri = os.getenv('MONGO_URI', 'mongodb://localhost:27017/')
+        mongo_uri = Config.MONGO_URI or os.getenv('MONGO_URI', '')
+        if not mongo_uri:
+            raise RuntimeError('MONGO_URI not configured. Set MONGO_URI in backend/.env or environment variables.')
         self.client = MongoClient(mongo_uri)
         self.db = self.client['venture_scout']
         self.projects = self.db['projects']

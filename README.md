@@ -103,52 +103,6 @@ Venture Scout automates the investment analysis process using:
 └──────────────────────────────────────────────────────────┘
 ```
 
-## 👥 Team Structure & Responsibilities
-
-### Person 1: AI/LLM Integration Specialist
-
-**Focus**: Large Language Models, Prompt Engineering, AI Analysis
-
-- Implemented Google Gemini API integration
-- Designed 8+ specialized prompts for different analysis tasks
-- Created intelligent repository analysis system
-- Developed structured output parsing
-
-**Key Files**: `llm_client.py`, `prompts.py`, `ai_analyzer.py`, `config.py`
-
-### Person 2: NLP & Data Analysis Specialist
-
-**Focus**: Natural Language Processing, Sentiment Analysis, Trend Detection
-
-- Built sentiment analysis pipeline using TextBlob
-- Implemented trend detection algorithms
-- Created data collection and processing systems
-- Developed GitHub API integration
-
-**Key Files**: `sentiment_analyzer.py`, `trend_analyzer.py`, `data_collector.py`, `github_api.py`, `data_processor.py`, `text_processor.py`
-
-### Person 3: ML Scoring & Recommendation Specialist
-
-**Focus**: Machine Learning Scoring, Recommendation Engine, Report Generation
-
-- Designed multi-factor scoring algorithm
-- Built AI-powered recommendation system
-- Created automated investment memo generator
-- Developed Flask API and database integration
-
-**Key Files**: `scoring_engine.py`, `recommendation_engine.py`, `memo_generator.py`, `app.py`, `database.py`
-
-### Person 4: Frontend & UX Specialist
-
-**Focus**: User Interface, Data Visualization, User Experience
-
-- Designed professional, modern UI
-- Implemented real-time data visualization
-- Created responsive layouts
-- Built interactive analysis dashboard
-
-**Key Files**: `index.html`, `styles.css`, `app.js`, `ai_visualizer.js`
-
 ## 🛠️ Technology Stack
 
 ### Backend

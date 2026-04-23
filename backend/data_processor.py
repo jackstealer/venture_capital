@@ -1,19 +1,8 @@
-# PERSON 2: Data Processing
-# Cleans and structures raw GitHub data
-
 from datetime import datetime
 
 class DataProcessor:
-    """Processes and cleans raw repository data"""
-    
+
     def process_repo_data(self, raw_repo):
-        """
-        Transform raw GitHub API response into clean structured data
-        Args:
-            raw_repo (dict): Raw repository data from GitHub API
-        Returns:
-            dict: Cleaned and structured repository data
-        """
         return {
             'id': raw_repo.get('id'),
             'repo_name': raw_repo.get('name', ''),
@@ -80,10 +69,6 @@ class DataProcessor:
             return 0
     
     def _calculate_activity_score(self, repo):
-        """
-        Calculate a simple activity score based on recent updates
-        Higher score = more active
-        """
         try:
             # Get days since last push
             pushed_at = repo.get('pushed_at', '')
@@ -99,13 +84,6 @@ class DataProcessor:
             return 0
     
     def calculate_growth_metrics(self, repo_data):
-        """
-        Calculate growth and momentum metrics
-        Args:
-            repo_data (dict): Processed repository data
-        Returns:
-            dict: Growth metrics
-        """
         age_days = repo_data.get('age_days', 1)
         stars = repo_data.get('stars', 0)
         forks = repo_data.get('forks', 0)
@@ -122,10 +100,6 @@ class DataProcessor:
         }
     
     def _calculate_momentum(self, repo_data):
-        """
-        Calculate momentum score (0-100)
-        Based on stars, activity, and recency
-        """
         stars = repo_data.get('stars', 0)
         activity = repo_data.get('activity_score', 0)
         age_days = repo_data.get('age_days', 1)

@@ -440,54 +440,39 @@ Factors:
 ```
 venture-scout/
 ├── backend/                    # Python backend
-│   ├── ai_analyzer.py         # AI analysis (Person 1)
-│   ├── llm_client.py          # LLM integration (Person 1)
-│   ├── prompts.py             # Prompt templates (Person 1)
-│   ├── config.py              # Configuration (Person 1)
-│   ├── sentiment_analyzer.py  # Sentiment analysis (Person 2)
-│   ├── trend_analyzer.py      # Trend detection (Person 2)
-│   ├── data_collector.py      # Data collection (Person 2)
-│   ├── github_api.py          # GitHub API (Person 2)
-│   ├── data_processor.py      # Data processing (Person 2)
-│   ├── text_processor.py      # Text processing (Person 2)
-│   ├── scoring_engine.py      # Scoring system (Person 3)
-│   ├── recommendation_engine.py # Recommendations (Person 3)
-│   ├── memo_generator.py      # Memo generation (Person 3)
-│   ├── app.py                 # Flask API (Person 3)
-│   ├── database.py            # Data storage (Person 3)
+│   ├── ai_analyzer.py         # AI analysis 
+│   ├── llm_client.py          # LLM integration 
+│   ├── prompts.py             # Prompt templates 
+│   ├── config.py              # Configuration 
+│   ├── sentiment_analyzer.py  # Sentiment analysis 
+│   ├── trend_analyzer.py      # Trend detection 
+│   ├── data_collector.py      # Data collection 
+│   ├── github_api.py          # GitHub API 
+│   ├── data_processor.py      # Data processing 
+│   ├── text_processor.py      # Text processing 
+│   ├── scoring_engine.py      # Scoring system 
+│   ├── recommendation_engine.py # Recommendations 
+│   ├── memo_generator.py      # Memo generation 
+│   ├── app.py                 # Flask API
+│   ├── database.py            # Data storage
 │   ├── requirements.txt       # Dependencies
 │   └── .env                   # Environment variables
-├── frontend/                   # Frontend (Person 4)
+├── frontend/                   # Frontend 
 │   ├── index.html             # Main page
 │   ├── styles.css             # Styling
 │   ├── app.js                 # Application logic
 │   └── ai_visualizer.js       # Visualizations
 ├── data/                       # Data storage
 │   └── projects.json          # Analyzed projects
-├── docs/                       # Documentation
-│   ├── PERSON1.md             # Person 1 documentation
-│   ├── PERSON2.md             # Person 2 documentation
-│   ├── PERSON3.md             # Person 3 documentation
-│   └── PERSON4.md             # Person 4 documentation
 └── README.md                   # This file
 ```
-
-## 📚 Documentation
-
-Detailed technical documentation for each team member:
-
-- [Person 1: AI/LLM Integration](docs/PERSON1.md)
-- [Person 2: NLP & Data Analysis](docs/PERSON2.md)
-- [Person 3: ML Scoring & Recommendations](docs/PERSON3.md)
-- [Person 4: Frontend & UX](docs/PERSON4.md)
 
 ## 🤝 Contributing
 
 This is an educational project for a Gen AI course. For questions or suggestions:
 
-1. Review the documentation in the `docs/` folder
-2. Check the code comments for implementation details
-3. Refer to individual team member documentation
+1. Check the code comments for implementation details
+2. Refer to individual team member documentation
 
 ## 📄 License
 
@@ -504,7 +489,6 @@ MIT License - Feel free to use this project for educational purposes.
 
 For technical questions:
 
-- Review the documentation in `docs/` folder
 - Check code comments in source files
 - Refer to API documentation above
 

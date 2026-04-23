@@ -1,33 +1,13 @@
-# PERSON 1: AI-Powered Repository Analysis
-# Main AI analysis module using LLM
-
 from llm_client import LLMClient
 from prompts import PromptTemplates
 import json
 
 class AIAnalyzer:
-    """
-    AI-powered repository analyzer using LLMs
-    Performs intelligent analysis of GitHub repositories
-    """
-    
-    def __init__(self, provider='gemini'):
-        """
-        Initialize AI analyzer
-        Args:
-            provider (str): LLM provider ('gemini' or 'openai')
-        """
+     def __init__(self, provider='gemini'):
         self.llm = LLMClient(provider=provider)
         self.prompts = PromptTemplates()
     
     def analyze_repository(self, repo_data):
-        """
-        Comprehensive AI analysis of repository
-        Args:
-            repo_data (dict): Repository information
-        Returns:
-            dict: AI-generated analysis
-        """
         print(f"🤖 AI analyzing repository: {repo_data.get('repo_name')}")
         
         # Generate prompt
@@ -44,13 +24,6 @@ class AIAnalyzer:
         return analysis
     
     def generate_investment_memo(self, analysis_data):
-        """
-        Generate AI-written investment memo
-        Args:
-            analysis_data (dict): Combined analysis data
-        Returns:
-            dict: Investment memo
-        """
         print(f"📝 Generating investment memo...")
         
         prompt = self.prompts.investment_memo_prompt(analysis_data)
@@ -66,77 +39,32 @@ class AIAnalyzer:
         }
     
     def analyze_sentiment(self, text):
-        """
-        AI-powered sentiment analysis
-        Args:
-            text (str): Text to analyze
-        Returns:
-            dict: Sentiment analysis results
-        """
         prompt = self.prompts.sentiment_analysis_prompt(text)
         return self.llm.generate_structured(prompt)
     
     def detect_trends(self, repo_data, market_context="Current trends: AI/ML, Web3, DevTools, Cloud Native"):
-        """
-        Detect if project aligns with current trends
-        Args:
-            repo_data (dict): Repository data
-            market_context (str): Current market trends
-        Returns:
-            dict: Trend analysis
-        """
         print(f"📊 Detecting trends...")
         
         prompt = self.prompts.trend_detection_prompt(repo_data, market_context)
         return self.llm.generate_structured(prompt)
     
     def assess_risks(self, repo_data):
-        """
-        AI-powered risk assessment
-        Args:
-            repo_data (dict): Repository data
-        Returns:
-            dict: Risk analysis
-        """
         print(f"⚠️  Assessing risks...")
         
         prompt = self.prompts.risk_assessment_prompt(repo_data)
         return self.llm.generate_structured(prompt)
     
     def compare_projects(self, repo1_data, repo2_data):
-        """
-        AI comparison of two projects
-        Args:
-            repo1_data (dict): First repository
-            repo2_data (dict): Second repository
-        Returns:
-            dict: Comparative analysis
-        """
         print(f"⚖️  Comparing projects...")
         
         prompt = self.prompts.competitive_analysis_prompt(repo1_data, repo2_data)
         return self.llm.generate_structured(prompt)
     
     def estimate_market_size(self, repo_data):
-        """
-        AI-powered market sizing
-        Args:
-            repo_data (dict): Repository data
-        Returns:
-            dict: Market analysis
-        """
         prompt = self.prompts.market_sizing_prompt(repo_data)
         return self.llm.generate_structured(prompt)
     
     def analyze_code_quality(self, readme_content, language):
-        """
-        Analyze code quality from README
-        Args:
-            readme_content (str): README text
-            language (str): Programming language
-        Returns:
-            dict: Code quality analysis
-        """
         prompt = self.prompts.code_quality_prompt(readme_content, language)
         return self.llm.generate_structured(prompt)
     
@@ -164,13 +92,6 @@ class AIAnalyzer:
         return 'Monitor'  # Default
     
     def full_analysis(self, repo_data):
-        """
-        Run complete AI analysis pipeline
-        Args:
-            repo_data (dict): Repository data
-        Returns:
-            dict: Complete analysis
-        """
         print(f"\n🚀 Running full AI analysis for: {repo_data.get('repo_name')}\n")
         
         # 1. Repository Analysis

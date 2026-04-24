@@ -3,7 +3,7 @@ from prompts import PromptTemplates
 import json
 
 class AIAnalyzer:
-    def __init__(self, provider='gemini'):
+    def __init__(self, provider='grok'):
         self.llm = LLMClient(provider=provider)
         self.prompts = PromptTemplates()
     

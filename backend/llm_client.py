@@ -1,34 +1,41 @@
 # LLM API Client
-# Wrapper for Google Gemini and OpenAI APIs
+# Wrapper for Grok, Gemini and OpenAI APIs
 
 import os
-from google import genai
-from google.genai import types
+from openai import OpenAI
 from config import Config
 
 class LLMClient:
     """
-    Unified client for LLM APIs (Gemini/OpenAI)
+    Unified client for LLM APIs (Grok/Gemini/OpenAI)
     Handles API calls, prompt formatting, and response parsing
     """
     
-    def __init__(self, provider='gemini'):
+    def __init__(self, provider='grok'):
         """
         Initialize LLM client
         Args:
-            provider (str): 'gemini' or 'openai'
+            provider (str): 'grok', 'gemini' or 'openai'
         """
         self.provider = provider
         
-        if provider == 'gemini':
+        if provider == 'grok':
+            # Grok uses OpenAI-compatible API
+            self.client = OpenAI(
+                api_key=Config.GROK_API_KEY,
+                base_url="https://api.x.ai/v1"
+            )
+            self.model_id = 'grok-beta'
+        elif provider == 'gemini':
+            from google import genai
+            from google.genai import types
+            self.genai_types = types
             # Using new google.genai package
             self.client = genai.Client(api_key=Config.GEMINI_API_KEY)
-            # Use models without version prefix for new API
-            self.model_id = 'gemini-1.5-flash-latest'  # Latest stable model
+            self.model_id = 'gemini-1.5-flash-latest'
         elif provider == 'openai':
-            import openai
-            openai.api_key = Config.OPENAI_API_KEY
-            self.client = openai
+            self.client = OpenAI(api_key=Config.OPENAI_API_KEY)
+            self.model_id = 'gpt-3.5-turbo'
     
     def generate(self, prompt, temperature=0.7, max_tokens=1000):
         """
@@ -41,13 +48,32 @@ class LLMClient:
             str: Generated text
         """
         try:
-            if self.provider == 'gemini':
+            if self.provider == 'grok':
+                return self._generate_grok(prompt, temperature, max_tokens)
+            elif self.provider == 'gemini':
                 return self._generate_gemini(prompt, temperature)
             elif self.provider == 'openai':
                 return self._generate_openai(prompt, temperature, max_tokens)
         except Exception as e:
             print(f"LLM generation error: {e}")
             return f"Error generating response: {str(e)}"
+    
+    def _generate_grok(self, prompt, temperature, max_tokens):
+        """Generate using Grok API (OpenAI-compatible)"""
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model_id,
+                messages=[
+                    {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"Grok API error: {e}")
+            return f"Error: {str(e)}"
     
     def _generate_gemini(self, prompt, temperature):
         """Generate using Google Gemini with new API"""
@@ -63,7 +89,7 @@ class LLMClient:
                 response = self.client.models.generate_content(
                     model=model,
                     contents=prompt,
-                    config=types.GenerateContentConfig(
+                    config=self.genai_types.GenerateContentConfig(
                         temperature=temperature,
                         top_p=0.95,
                         top_k=40,
@@ -79,17 +105,20 @@ class LLMClient:
     
     def _generate_openai(self, prompt, temperature, max_tokens):
         """Generate using OpenAI GPT"""
-        response = self.client.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert venture capital analyst."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=temperature,
-            max_tokens=max_tokens
-        )
-        
-        return response.choices[0].message.content
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model_id,
+                messages=[
+                    {"role": "system", "content": "You are an expert venture capital analyst."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"OpenAI API error: {e}")
+            return f"Error: {str(e)}"
     
     def generate_structured(self, prompt, schema=None):
         """

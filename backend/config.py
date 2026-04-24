@@ -7,6 +7,7 @@ class Config:
     """Application configuration"""
     
     # API Keys
+    GROK_API_KEY = os.getenv('GROK_API_KEY', '')
     GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
     GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')  # Optional, for higher rate limits
     

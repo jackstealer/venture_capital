@@ -25,8 +25,8 @@ class LLMClient:
                 api_key=Config.OPENROUTER_API_KEY,
                 base_url="https://openrouter.ai/api/v1"
             )
-            # Using Google's Gemini via OpenRouter (free tier)
-            self.model_id = 'google/gemini-flash-1.5'
+            # Using Mistral 7B (free and reliable)
+            self.model_id = 'mistralai/mistral-7b-instruct:free'
         elif provider == 'grok':
             # Grok uses OpenAI-compatible API
             self.client = OpenAI(

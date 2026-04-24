@@ -18,7 +18,7 @@ class AIAnalyzer:
         
         # Add metadata
         analysis['analyzed_by'] = 'AI'
-        analysis['model'] = 'gemini-flash-1.5'  # OpenRouter model
+        analysis['model'] = 'mistral-7b'  # OpenRouter model
         analysis['repo_name'] = repo_data.get('repo_name')
         
         return analysis

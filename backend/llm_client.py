@@ -25,7 +25,8 @@ class LLMClient:
                 api_key=Config.GROK_API_KEY,
                 base_url="https://api.x.ai/v1"
             )
-            self.model_id = 'grok-2-1212'  # Correct Grok model name
+            # Try common Grok model names
+            self.model_id = 'grok-beta'  # Standard Grok model
         elif provider == 'gemini':
             from google import genai
             from google.genai import types
@@ -60,20 +61,27 @@ class LLMClient:
     
     def _generate_grok(self, prompt, temperature, max_tokens):
         """Generate using Grok API (OpenAI-compatible)"""
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model_id,
-                messages=[
-                    {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=temperature,
-                max_tokens=max_tokens
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            print(f"Grok API error: {e}")
-            return f"Error: {str(e)}"
+        # Try multiple possible Grok model names
+        models_to_try = ['grok-beta', 'grok-2-latest', 'grok-2', 'grok-1']
+        
+        for model in models_to_try:
+            try:
+                response = self.client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=temperature,
+                    max_tokens=max_tokens
+                )
+                return response.choices[0].message.content
+            except Exception as e:
+                error_msg = str(e)
+                print(f"Grok API error with {model}: {error_msg}")
+                if model == models_to_try[-1]:  # Last model
+                    return f"Error: All Grok models failed. Last error: {error_msg}"
+                continue  # Try next model
     
     def _generate_gemini(self, prompt, temperature):
         """Generate using Google Gemini with new API"""
@@ -130,25 +138,51 @@ class LLMClient:
             dict: Parsed JSON response
         """
         import json
+        import re
         
         # Add JSON formatting instruction to prompt
         structured_prompt = f"""{prompt}
 
-Please respond with valid JSON only, following this structure:
-{json.dumps(schema, indent=2) if schema else "{}"}
+IMPORTANT: Respond with ONLY valid JSON. No additional text before or after the JSON.
+{f"Follow this structure: {json.dumps(schema, indent=2)}" if schema else ""}
 
-Response:"""
+JSON Response:"""
         
-        response_text = self.generate(structured_prompt, temperature=0.3)
+        response_text = self.generate(structured_prompt, temperature=0.3, max_tokens=2000)
+        
+        # Check if response is an error
+        if response_text.startswith("Error:"):
+            print(f"LLM Error in generate_structured: {response_text}")
+            # Return default schema with N/A values
+            if schema:
+                return {key: "N/A" if isinstance(value, str) else 0 for key, value in schema.items()}
+            return {"error": response_text}
         
         try:
-            # Extract JSON from response
-            json_start = response_text.find('{')
-            json_end = response_text.rfind('}') + 1
-            json_str = response_text[json_start:json_end]
-            return json.loads(json_str)
-        except:
-            return {"error": "Failed to parse JSON", "raw_response": response_text}
+            # Try to find JSON in the response
+            # Look for JSON object
+            json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(0)
+                parsed = json.loads(json_str)
+                return parsed
+            
+            # If no JSON found, try direct parse
+            return json.loads(response_text)
+            
+        except json.JSONDecodeError as e:
+            print(f"JSON Parse Error: {e}")
+            print(f"Response text: {response_text[:500]}...")
+            
+            # Return default schema with N/A values
+            if schema:
+                return {key: "N/A" if isinstance(value, str) else 0 for key, value in schema.items()}
+            return {"error": "Failed to parse JSON", "raw_response": response_text[:500]}
+        except Exception as e:
+            print(f"Unexpected error in generate_structured: {e}")
+            if schema:
+                return {key: "N/A" if isinstance(value, str) else 0 for key, value in schema.items()}
+            return {"error": str(e)}
     
     def analyze_code(self, code_snippet, language='python'):
         """

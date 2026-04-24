@@ -18,7 +18,7 @@ class AIAnalyzer:
         
         # Add metadata
         analysis['analyzed_by'] = 'AI'
-        analysis['model'] = 'gemini-2.5-flash'
+        analysis['model'] = 'grok-beta'  # Updated to match current provider
         analysis['repo_name'] = repo_data.get('repo_name')
         
         return analysis

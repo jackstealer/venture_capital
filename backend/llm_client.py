@@ -23,7 +23,7 @@ class LLMClient:
         if provider == 'gemini':
             # Using new google.genai package
             self.client = genai.Client(api_key=Config.GEMINI_API_KEY)
-            self.model_id = 'gemini-2.0-flash-exp'  # Latest model
+            self.model_id = 'gemini-1.5-flash'  # Stable working model
         elif provider == 'openai':
             import openai
             openai.api_key = Config.OPENAI_API_KEY

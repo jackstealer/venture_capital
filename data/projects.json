@@ -304,10 +304,10 @@
     "full_name": "kyegomez/OpenMythos",
     "repo_url": "https://github.com/kyegomez/OpenMythos",
     "description": "A theoretical reconstruction of the Claude Mythos architecture, built from first principles using the available research literature.",
-    "stars": 8307,
-    "forks": 1716,
-    "watchers": 8307,
-    "open_issues": 38,
+    "stars": 9769,
+    "forks": 2134,
+    "watchers": 9769,
+    "open_issues": 40,
     "primary_language": "Python",
     "topics": [
       "ai",
@@ -331,22 +331,22 @@
     ],
     "languages": {},
     "created_at": "2026-04-18T12:57:52Z",
-    "updated_at": "2026-04-22T19:03:53.502297",
-    "pushed_at": "2026-04-20T13:43:27Z",
+    "updated_at": "2026-04-24T08:46:09.448305",
+    "pushed_at": "2026-04-22T17:01:02Z",
     "owner": {
       "login": "kyegomez",
       "avatar_url": "https://avatars.githubusercontent.com/u/98760976?v=4",
       "type": "User"
     },
-    "size": 76,
+    "size": 91,
     "default_branch": "main",
     "has_wiki": true,
     "has_issues": true,
     "license": "MIT License",
     "top_contributors": [],
-    "age_days": 4,
+    "age_days": 5,
     "activity_score": 99,
-    "fetched_at": "2026-04-22T19:03:53.490887"
+    "fetched_at": "2026-04-24T08:46:09.401293"
   },
   {
     "id": 1213049020,
@@ -385,9 +385,9 @@
     "full_name": "alchaincyf/huashu-design",
     "repo_url": "https://github.com/alchaincyf/huashu-design",
     "description": "Huashu Design \u00b7 HTML-native design skill for Claude Code \u00b7 Claude Code \u91cc HTML \u539f\u751f\u7684\u8bbe\u8ba1 skill \u00b7 \u9ad8\u4fdd\u771f\u539f\u578b / \u5e7b\u706f\u7247 / \u52a8\u753b + 20 \u8bbe\u8ba1\u54f2\u5b66 + 5 \u7ef4\u8bc4\u5ba1 + MP4 \u5bfc\u51fa \u00b7 Agent-agnostic",
-    "stars": 4154,
-    "forks": 645,
-    "watchers": 4154,
+    "stars": 5550,
+    "forks": 861,
+    "watchers": 5550,
     "open_issues": 7,
     "primary_language": "HTML",
     "topics": [],
@@ -398,7 +398,7 @@
       "Python": 5451
     },
     "created_at": "2026-04-19T14:42:06Z",
-    "updated_at": "2026-04-22T19:04:07.965103",
+    "updated_at": "2026-04-24T08:46:25.618539",
     "pushed_at": "2026-04-21T16:13:41Z",
     "owner": {
       "login": "alchaincyf",
@@ -434,21 +434,21 @@
         "contributions": 30
       }
     ],
-    "age_days": 2,
-    "activity_score": 100,
-    "fetched_at": "2026-04-22T19:04:06.361007",
+    "age_days": 4,
+    "activity_score": 98,
+    "fetched_at": "2026-04-24T08:46:21.856595",
     "complete_analysis": {
       "repo_info": {
         "name": "huashu-design",
         "url": "https://github.com/alchaincyf/huashu-design",
         "description": "Huashu Design \u00b7 HTML-native design skill for Claude Code \u00b7 Claude Code \u91cc HTML \u539f\u751f\u7684\u8bbe\u8ba1 skill \u00b7 \u9ad8\u4fdd\u771f\u539f\u578b / \u5e7b\u706f\u7247 / \u52a8\u753b + 20 \u8bbe\u8ba1\u54f2\u5b66 + 5 \u7ef4\u8bc4\u5ba1 + MP4 \u5bfc\u51fa \u00b7 Agent-agnostic",
-        "stars": 4154,
-        "forks": 645,
+        "stars": 5550,
+        "forks": 861,
         "language": "HTML"
       },
       "ai_analysis": {
         "error": "Failed to parse JSON",
-        "raw_response": "Error generating response: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+        "raw_response": "Error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
         "analyzed_by": "AI",
         "model": "gemini-pro",
         "repo_name": "huashu-design"
@@ -481,7 +481,7 @@
         "sentiment_score": 50.0
       },
       "trend_analysis": {
-        "trend_score": 55.0,
+        "trend_score": 54.6,
         "trending_categories": [],
         "hot_keywords": [
           "agent"
@@ -492,12 +492,12 @@
         "trend_strength": "Moderate"
       },
       "scoring": {
-        "final_score": 63.25,
+        "final_score": 63.19,
         "breakdown": {
           "traction": 100,
           "technology": 60,
           "market": 40,
-          "trend": 55.0,
+          "trend": 54.6,
           "sentiment": 50.0,
           "risk": 50
         },
@@ -507,19 +507,19 @@
       "recommendation": {
         "repo_name": "huashu-design",
         "repo_url": "https://github.com/alchaincyf/huashu-design",
-        "final_score": 63.25,
+        "final_score": 63.19,
         "grade": "C+",
         "recommendation": "Monitor",
         "score_breakdown": {
           "traction": 100,
           "technology": 60,
           "market": 40,
-          "trend": 55.0,
+          "trend": 54.6,
           "sentiment": 50.0,
           "risk": 50
         },
         "key_insights": [
-          "Growing community with 4,154 stars",
+          "Growing community with 5,550 stars",
           "Very active development (recently updated)",
           "Early-stage project - high risk, high potential"
         ],
@@ -535,12 +535,12 @@
           {
             "type": "Rapid Growth",
             "potential": "High",
-            "description": "High star velocity (2077.0 stars/day)"
+            "description": "High star velocity (1387.5 stars/day)"
           },
           {
             "type": "Community Engagement",
             "potential": "Medium",
-            "description": "Strong community with 645 forks"
+            "description": "Strong community with 861 forks"
           }
         ],
         "next_steps": [
@@ -552,10 +552,10 @@
         ]
       },
       "investment_memo": {
-        "memo": "\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    INVESTMENT MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nProject: huashu-design\nURL: https://github.com/alchaincyf/huashu-design\nDate: April 22, 2026\nAnalyst: AI Investment Analysis System\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEXECUTIVE SUMMARY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError generating response: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMARKET OPPORTUNITY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError generating response: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nPRODUCT & TECHNOLOGY ASSESSMENT\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError generating response: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTRACTION & METRICS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nTraction Metrics:\n- GitHub Stars: 4,154\n- Forks: 645\n- Age: 2 days\n- Star Velocity: 2077.00 stars/day\n- Community Engagement: High\n\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nINVESTMENT THESIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError generating response: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRISK ANALYSIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nKey Risks:\n- Early-stage project with unproven track record\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nSCORING BREAKDOWN\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nTraction: 100/100\nTechnology: 60/100\nMarket: 40/100\nTrend: 55.0/100\nSentiment: 50.0/100\nRisk: 50/100\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRECOMMENDATION\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nFinal Recommendation: Monitor\nGrade: C+\nConviction Score: 63.25/100\n\nAction: MONITOR for 3-6 months before making decision.\n\n\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    END OF MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n",
-        "conviction_score": 63.25,
+        "memo": "\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    INVESTMENT MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nProject: huashu-design\nURL: https://github.com/alchaincyf/huashu-design\nDate: April 24, 2026\nAnalyst: AI Investment Analysis System\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEXECUTIVE SUMMARY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMARKET OPPORTUNITY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nPRODUCT & TECHNOLOGY ASSESSMENT\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTRACTION & METRICS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nTraction Metrics:\n- GitHub Stars: 5,550\n- Forks: 861\n- Age: 4 days\n- Star Velocity: 1387.50 stars/day\n- Community Engagement: High\n\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nINVESTMENT THESIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRISK ANALYSIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nKey Risks:\n- Early-stage project with unproven track record\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nSCORING BREAKDOWN\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nTraction: 100/100\nTechnology: 60/100\nMarket: 40/100\nTrend: 54.6/100\nSentiment: 50.0/100\nRisk: 50/100\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRECOMMENDATION\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nFinal Recommendation: Monitor\nGrade: C+\nConviction Score: 63.19/100\n\nAction: MONITOR for 3-6 months before making decision.\n\n\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    END OF MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n",
+        "conviction_score": 63.19,
         "recommendation": "Monitor",
-        "generated_at": "2026-04-22T19:04:07.943495"
+        "generated_at": "2026-04-24T08:46:25.558979"
       }
     }
   },
@@ -565,68 +565,77 @@
     "full_name": "tw93/Kami",
     "repo_url": "https://github.com/tw93/Kami",
     "description": "\ud83d\udc69\u200d\ud83d\ude92 Good content deserves good paper.",
-    "stars": 2282,
-    "forks": 110,
-    "watchers": 2282,
+    "stars": 2910,
+    "forks": 142,
+    "watchers": 2910,
     "open_issues": 0,
     "primary_language": "HTML",
     "topics": [],
     "languages": {},
     "created_at": "2026-04-20T16:35:19Z",
-    "updated_at": "2026-04-22T19:03:53.565290",
-    "pushed_at": "2026-04-22T12:19:12Z",
+    "updated_at": "2026-04-24T08:46:09.562304",
+    "pushed_at": "2026-04-23T13:43:21Z",
     "owner": {
       "login": "tw93",
       "avatar_url": "https://avatars.githubusercontent.com/u/8736212?v=4",
       "type": "User"
     },
-    "size": 33192,
+    "size": 59660,
     "default_branch": "main",
     "has_wiki": false,
     "has_issues": true,
     "license": "MIT License",
     "top_contributors": [],
-    "age_days": 1,
+    "age_days": 3,
     "activity_score": 100,
-    "fetched_at": "2026-04-22T19:03:53.490887"
+    "fetched_at": "2026-04-24T08:46:09.401293"
   },
   {
     "id": 1214290850,
     "repo_name": "awesome-gpt-image-2-prompts",
     "full_name": "EvoLinkAI/awesome-gpt-image-2-prompts",
     "repo_url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
-    "description": "Curated GPT-Image-2 prompts and image examples across portraits, posters, UI mockups, character sheets, and community experiments.",
-    "stars": 1554,
-    "forks": 136,
-    "watchers": 1554,
-    "open_issues": 4,
+    "description": "Curated GPT-Image-2 prompts fot the Openai API\uff1aimage examples across portraits, posters, UI mockups, character sheets, and community experiments.",
+    "stars": 2836,
+    "forks": 254,
+    "watchers": 2836,
+    "open_issues": 6,
     "primary_language": "Python",
     "topics": [
-      "ai-art",
+      "api",
       "awesome-list",
-      "evolink",
+      "chatgpt",
+      "generative-",
       "gpt-image-2",
+      "gpt-image-2-api",
+      "gpt-image-2-prompts",
       "image-generation",
-      "prompts"
+      "image-prompt",
+      "image-to-image",
+      "openai",
+      "prompt-",
+      "prompt-collection",
+      "prompts",
+      "text-to-image"
     ],
     "languages": {},
     "created_at": "2026-04-18T11:22:14Z",
-    "updated_at": "2026-04-22T19:03:53.587135",
-    "pushed_at": "2026-04-22T09:50:44Z",
+    "updated_at": "2026-04-24T08:46:09.612817",
+    "pushed_at": "2026-04-23T15:30:15Z",
     "owner": {
       "login": "EvoLinkAI",
       "avatar_url": "https://avatars.githubusercontent.com/u/253253881?v=4",
       "type": "User"
     },
-    "size": 33435,
+    "size": 51055,
     "default_branch": "main",
     "has_wiki": true,
     "has_issues": true,
     "license": "Other",
     "top_contributors": [],
-    "age_days": 4,
+    "age_days": 5,
     "activity_score": 100,
-    "fetched_at": "2026-04-22T19:03:53.490887"
+    "fetched_at": "2026-04-24T08:46:09.401293"
   },
   {
     "id": 1212769188,
@@ -658,5 +667,94 @@
     "age_days": 5,
     "activity_score": 97,
     "fetched_at": "2026-04-22T19:03:53.490887"
+  },
+  {
+    "id": 1214028719,
+    "repo_name": "open-codesign",
+    "full_name": "OpenCoworkAI/open-codesign",
+    "repo_url": "https://github.com/OpenCoworkAI/open-codesign",
+    "description": "Open-source Claude Design alternative. One-click import your Claude Code / Codex API key. Prompt \u2192 prototype / slides / PDF. Multi-model (Claude, GPT, Gemini, Kimi, GLM, Ollama). BYOK, local-first, MIT.",
+    "stars": 1936,
+    "forks": 146,
+    "watchers": 1936,
+    "open_issues": 48,
+    "primary_language": "TypeScript",
+    "topics": [
+      "ai-design",
+      "anthropic",
+      "byok",
+      "claude",
+      "claude-code",
+      "claude-design",
+      "claude-design-alternative",
+      "deepseek",
+      "design-to-code",
+      "desktop-app",
+      "electron",
+      "figma-alternative",
+      "gemini",
+      "local-first",
+      "multi-model",
+      "ollama",
+      "openai",
+      "openrouter",
+      "typescript",
+      "ui-generator"
+    ],
+    "languages": {},
+    "created_at": "2026-04-18T03:14:33Z",
+    "updated_at": "2026-04-24T08:46:09.662378",
+    "pushed_at": "2026-04-23T17:29:28Z",
+    "owner": {
+      "login": "OpenCoworkAI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/254727761?v=4",
+      "type": "Organization"
+    },
+    "size": 61672,
+    "default_branch": "main",
+    "has_wiki": false,
+    "has_issues": true,
+    "license": "MIT License",
+    "top_contributors": [],
+    "age_days": 6,
+    "activity_score": 100,
+    "fetched_at": "2026-04-24T08:46:09.401293"
+  },
+  {
+    "id": 1214125715,
+    "repo_name": "awesome-claude-design",
+    "full_name": "VoltAgent/awesome-claude-design",
+    "repo_url": "https://github.com/VoltAgent/awesome-claude-design",
+    "description": "Awesome Claude Design: 68 ready-to-use design system inspirations in DESIGN.md format. Drop one in, scaffold a full UI in one shot.",
+    "stars": 1414,
+    "forks": 149,
+    "watchers": 1414,
+    "open_issues": 1,
+    "primary_language": null,
+    "topics": [
+      "claude-code",
+      "claude-design",
+      "design-md",
+      "design-system",
+      "figma"
+    ],
+    "languages": {},
+    "created_at": "2026-04-18T06:40:04Z",
+    "updated_at": "2026-04-24T08:46:09.709896",
+    "pushed_at": "2026-04-18T12:41:05Z",
+    "owner": {
+      "login": "VoltAgent",
+      "avatar_url": "https://avatars.githubusercontent.com/u/201282378?v=4",
+      "type": "Organization"
+    },
+    "size": 23,
+    "default_branch": "main",
+    "has_wiki": false,
+    "has_issues": true,
+    "license": "MIT License",
+    "top_contributors": [],
+    "age_days": 5,
+    "activity_score": 95,
+    "fetched_at": "2026-04-24T08:46:09.401293"
   }
 ]

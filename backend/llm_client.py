@@ -23,7 +23,7 @@ class LLMClient:
         if provider == 'gemini':
             # Using new google.genai package
             self.client = genai.Client(api_key=Config.GEMINI_API_KEY)
-            self.model_id = 'gemini-2.5-flash'  # Latest model
+            self.model_id = 'gemini-2.0-flash-exp'  # Latest model
         elif provider == 'openai':
             import openai
             openai.api_key = Config.OPENAI_API_KEY
@@ -64,10 +64,10 @@ class LLMClient:
             return response.text
         except Exception as e:
             print(f"Gemini API error: {e}")
-            # Fallback to gemini-2.5-flash if flash-exp not available
+            # Fallback to gemini-pro if flash-exp not available
             try:
                 response = self.client.models.generate_content(
-                    model='gemini-2.5-flash',
+                    model='gemini-pro',
                     contents=prompt,
                     config=types.GenerateContentConfig(
                         temperature=temperature,

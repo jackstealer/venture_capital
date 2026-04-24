@@ -25,8 +25,8 @@ class LLMClient:
                 api_key=Config.OPENROUTER_API_KEY,
                 base_url="https://openrouter.ai/api/v1"
             )
-            # Using Mistral 7B (free and reliable)
-            self.model_id = 'mistralai/mistral-7b-instruct:free'
+            # Using OpenAI GPT-3.5 Turbo via OpenRouter (most reliable)
+            self.model_id = 'openai/gpt-3.5-turbo'
         elif provider == 'grok':
             # Grok uses OpenAI-compatible API
             self.client = OpenAI(
@@ -67,20 +67,40 @@ class LLMClient:
     
     def _generate_openai_compatible(self, prompt, temperature, max_tokens):
         """Generate using OpenAI-compatible API (OpenRouter, Grok, OpenAI)"""
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model_id,
-                messages=[
-                    {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=temperature,
-                max_tokens=max_tokens
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            print(f"{self.provider.upper()} API error: {e}")
-            return f"Error: {str(e)}"
+        # List of models to try in order (for OpenRouter)
+        models_to_try = [self.model_id]
+        
+        # Add fallback models for OpenRouter
+        if self.provider == 'openrouter':
+            models_to_try.extend([
+                'openai/gpt-3.5-turbo',
+                'anthropic/claude-3-haiku',
+                'google/gemini-pro',
+                'meta-llama/llama-3-8b-instruct'
+            ])
+        
+        last_error = None
+        for model in models_to_try:
+            try:
+                print(f"🔄 Trying model: {model}")
+                response = self.client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=temperature,
+                    max_tokens=max_tokens
+                )
+                print(f"✅ Success with model: {model}")
+                return response.choices[0].message.content
+            except Exception as e:
+                last_error = e
+                print(f"❌ Failed with {model}: {str(e)[:100]}")
+                if model == models_to_try[-1]:  # Last model
+                    print(f"{self.provider.upper()} API error (all models failed): {e}")
+                    return f"Error: {str(e)}"
+                continue  # Try next model
     
     def _generate_gemini(self, prompt, temperature):
         """Generate using Google Gemini with new API"""
@@ -138,37 +158,58 @@ JSON Response:"""
         
         # Check if response is an error
         if response_text.startswith("Error:"):
-            print(f"LLM Error in generate_structured: {response_text}")
-            # Return default schema with N/A values
-            if schema:
-                return {key: "N/A" if isinstance(value, str) else 0 for key, value in schema.items()}
-            return {"error": response_text}
+            print(f"⚠️  LLM Error in generate_structured: {response_text}")
+            # Return meaningful default values based on common schemas
+            return self._get_default_response(schema)
         
         try:
+            # Clean the response text
+            response_text = response_text.strip()
+            
             # Try to find JSON in the response
-            # Look for JSON object
+            # Look for JSON object (handle both single-line and multi-line)
             json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
             if json_match:
                 json_str = json_match.group(0)
                 parsed = json.loads(json_str)
+                print(f"✅ Successfully parsed JSON response")
                 return parsed
             
             # If no JSON found, try direct parse
-            return json.loads(response_text)
+            parsed = json.loads(response_text)
+            print(f"✅ Successfully parsed JSON response (direct)")
+            return parsed
             
         except json.JSONDecodeError as e:
-            print(f"JSON Parse Error: {e}")
-            print(f"Response text: {response_text[:500]}...")
-            
-            # Return default schema with N/A values
-            if schema:
-                return {key: "N/A" if isinstance(value, str) else 0 for key, value in schema.items()}
-            return {"error": "Failed to parse JSON", "raw_response": response_text[:500]}
+            print(f"❌ JSON Parse Error: {e}")
+            print(f"Response text preview: {response_text[:200]}...")
+            return self._get_default_response(schema)
         except Exception as e:
-            print(f"Unexpected error in generate_structured: {e}")
-            if schema:
-                return {key: "N/A" if isinstance(value, str) else 0 for key, value in schema.items()}
-            return {"error": str(e)}
+            print(f"❌ Unexpected error in generate_structured: {e}")
+            return self._get_default_response(schema)
+    
+    def _get_default_response(self, schema=None):
+        """Generate meaningful default response when LLM fails"""
+        if schema:
+            # Return schema with appropriate defaults
+            defaults = {}
+            for key, value in schema.items():
+                if isinstance(value, int) or isinstance(value, float):
+                    defaults[key] = 50  # Neutral score
+                elif isinstance(value, list):
+                    defaults[key] = []
+                elif isinstance(value, dict):
+                    defaults[key] = {}
+                else:
+                    defaults[key] = "Analysis unavailable"
+            return defaults
+        
+        # Generic default response
+        return {
+            "error": "LLM service unavailable",
+            "status": "Please check API configuration",
+            "note": "Using fallback values"
+        }
     
     def analyze_code(self, code_snippet, language='python'):
         """

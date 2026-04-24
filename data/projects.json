@@ -304,9 +304,9 @@
     "full_name": "kyegomez/OpenMythos",
     "repo_url": "https://github.com/kyegomez/OpenMythos",
     "description": "A theoretical reconstruction of the Claude Mythos architecture, built from first principles using the available research literature.",
-    "stars": 9779,
+    "stars": 9785,
     "forks": 2137,
-    "watchers": 9779,
+    "watchers": 9785,
     "open_issues": 40,
     "primary_language": "Python",
     "topics": [
@@ -329,11 +329,9 @@
       "sonnet",
       "torch"
     ],
-    "languages": {
-      "Python": 186034
-    },
+    "languages": {},
     "created_at": "2026-04-18T12:57:52Z",
-    "updated_at": "2026-04-24T09:22:58.890299",
+    "updated_at": "2026-04-24T09:34:59.999579",
     "pushed_at": "2026-04-22T17:01:02Z",
     "owner": {
       "login": "kyegomez",
@@ -345,168 +343,10 @@
     "has_wiki": true,
     "has_issues": true,
     "license": "MIT License",
-    "top_contributors": [
-      {
-        "login": "kyegomez",
-        "id": 98760976,
-        "node_id": "U_kgDOBeL5EA",
-        "avatar_url": "https://avatars.githubusercontent.com/u/98760976?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/kyegomez",
-        "html_url": "https://github.com/kyegomez",
-        "followers_url": "https://api.github.com/users/kyegomez/followers",
-        "following_url": "https://api.github.com/users/kyegomez/following{/other_user}",
-        "gists_url": "https://api.github.com/users/kyegomez/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/kyegomez/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/kyegomez/subscriptions",
-        "organizations_url": "https://api.github.com/users/kyegomez/orgs",
-        "repos_url": "https://api.github.com/users/kyegomez/repos",
-        "events_url": "https://api.github.com/users/kyegomez/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/kyegomez/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false,
-        "contributions": 35
-      }
-    ],
+    "top_contributors": [],
     "age_days": 5,
     "activity_score": 99,
-    "fetched_at": "2026-04-24T09:22:55.344616",
-    "complete_analysis": {
-      "repo_info": {
-        "name": "OpenMythos",
-        "url": "https://github.com/kyegomez/OpenMythos",
-        "description": "A theoretical reconstruction of the Claude Mythos architecture, built from first principles using the available research literature.",
-        "stars": 9779,
-        "forks": 2137,
-        "language": "Python"
-      },
-      "ai_analysis": {
-        "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for meta-llama/llama-3.1-8b-instruct:free.', 'code': 404}, 'user_id': 'user_3CmtOzPJDLCINIOU6Mt2dPQloN3'}",
-        "analyzed_by": "AI",
-        "model": "llama-3.1-8b",
-        "repo_name": "OpenMythos"
-      },
-      "sentiment_analysis": {
-        "description_sentiment": {
-          "sentiment": "Positive",
-          "polarity": 0.217,
-          "subjectivity": 0.278,
-          "confidence": 21.67,
-          "enthusiasm_level": 60.83,
-          "positive_keywords_found": 0,
-          "negative_keywords_found": 0,
-          "word_count": 17,
-          "sentence_count": 1
-        },
-        "readme_sentiment": {
-          "sentiment": "Neutral",
-          "polarity": 0.0,
-          "subjectivity": 0.0,
-          "confidence": 0.0,
-          "enthusiasm_level": 50.0,
-          "positive_keywords_found": 0,
-          "negative_keywords_found": 0,
-          "word_count": 0,
-          "sentence_count": 0
-        },
-        "overall_sentiment": "Positive",
-        "overall_polarity": 0.108,
-        "sentiment_score": 55.43
-      },
-      "trend_analysis": {
-        "trend_score": 79.8,
-        "trending_categories": [
-          "AI/ML",
-          "Frontend"
-        ],
-        "hot_keywords": [
-          "ai",
-          "gpt"
-        ],
-        "growth_velocity": "Rapid",
-        "market_timing": "Early",
-        "is_trending": true,
-        "trend_strength": "Strong"
-      },
-      "scoring": {
-        "final_score": 76.51,
-        "breakdown": {
-          "traction": 100,
-          "technology": 95,
-          "market": 50,
-          "trend": 79.8,
-          "sentiment": 55.43,
-          "risk": 50
-        },
-        "grade": "B+",
-        "recommendation": "Invest"
-      },
-      "recommendation": {
-        "repo_name": "OpenMythos",
-        "repo_url": "https://github.com/kyegomez/OpenMythos",
-        "final_score": 76.51,
-        "grade": "B+",
-        "recommendation": "Invest",
-        "score_breakdown": {
-          "traction": 100,
-          "technology": 95,
-          "market": 50,
-          "trend": 79.8,
-          "sentiment": 55.43,
-          "risk": 50
-        },
-        "key_insights": [
-          "Growing community with 9,779 stars",
-          "Aligns with trending categories: AI/ML, Frontend",
-          "Very active development (recently updated)",
-          "Early-stage project - high risk, high potential"
-        ],
-        "investment_thesis": "Promising investment opportunity. OpenMythos shows solid performance in most areas. While there are some areas for improvement, the overall trajectory is positive. Recommended for investment with standard due diligence.",
-        "risks": [
-          {
-            "type": "Execution Risk",
-            "severity": "High",
-            "description": "Very new project - unproven track record"
-          }
-        ],
-        "opportunities": [
-          {
-            "type": "Market Timing",
-            "potential": "High",
-            "description": "Project aligns with current market trends"
-          },
-          {
-            "type": "Rapid Growth",
-            "potential": "High",
-            "description": "High star velocity (1955.8 stars/day)"
-          },
-          {
-            "type": "Community Engagement",
-            "potential": "Medium",
-            "description": "Strong community with 2137 forks"
-          },
-          {
-            "type": "Technology Trend",
-            "potential": "High",
-            "description": "Leverages hot technologies: ai, claude-ai"
-          }
-        ],
-        "next_steps": [
-          "Conduct additional due diligence",
-          "Review code quality in detail",
-          "Assess team/maintainer background",
-          "Evaluate competitive positioning",
-          "Monitor for 2-4 weeks before decision"
-        ]
-      },
-      "investment_memo": {
-        "memo": "\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    INVESTMENT MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nProject: OpenMythos\nURL: https://github.com/kyegomez/OpenMythos\nDate: April 24, 2026\nAnalyst: AI Investment Analysis System\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEXECUTIVE SUMMARY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: Error code: 404 - {'error': {'message': 'No endpoints found for meta-llama/llama-3.1-8b-instruct:free.', 'code': 404}, 'user_id': 'user_3CmtOzPJDLCINIOU6Mt2dPQloN3'}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMARKET OPPORTUNITY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: Error code: 404 - {'error': {'message': 'No endpoints found for meta-llama/llama-3.1-8b-instruct:free.', 'code': 404}, 'user_id': 'user_3CmtOzPJDLCINIOU6Mt2dPQloN3'}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nPRODUCT & TECHNOLOGY ASSESSMENT\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: Error code: 404 - {'error': {'message': 'No endpoints found for meta-llama/llama-3.1-8b-instruct:free.', 'code': 404}, 'user_id': 'user_3CmtOzPJDLCINIOU6Mt2dPQloN3'}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTRACTION & METRICS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nTraction Metrics:\n- GitHub Stars: 9,779\n- Forks: 2,137\n- Age: 5 days\n- Star Velocity: 1955.80 stars/day\n- Community Engagement: High\n\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nINVESTMENT THESIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nError: Error code: 404 - {'error': {'message': 'No endpoints found for meta-llama/llama-3.1-8b-instruct:free.', 'code': 404}, 'user_id': 'user_3CmtOzPJDLCINIOU6Mt2dPQloN3'}\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRISK ANALYSIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nKey Risks:\n- Early-stage project with unproven track record\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nSCORING BREAKDOWN\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nTraction: 100/100\nTechnology: 95/100\nMarket: 50/100\nTrend: 79.8/100\nSentiment: 55.43/100\nRisk: 50/100\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRECOMMENDATION\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nFinal Recommendation: Invest\nGrade: B+\nConviction Score: 76.51/100\n\nAction: CONSIDER investment after additional due diligence.\n\n\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    END OF MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n",
-        "conviction_score": 76.51,
-        "recommendation": "Invest",
-        "generated_at": "2026-04-24T09:22:58.849912"
-      }
-    }
+    "fetched_at": "2026-04-24T09:34:59.948922"
   },
   {
     "id": 1213049020,
@@ -545,15 +385,15 @@
     "full_name": "alchaincyf/huashu-design",
     "repo_url": "https://github.com/alchaincyf/huashu-design",
     "description": "Huashu Design \u00b7 HTML-native design skill for Claude Code \u00b7 Claude Code \u91cc HTML \u539f\u751f\u7684\u8bbe\u8ba1 skill \u00b7 \u9ad8\u4fdd\u771f\u539f\u578b / \u5e7b\u706f\u7247 / \u52a8\u753b + 20 \u8bbe\u8ba1\u54f2\u5b66 + 5 \u7ef4\u8bc4\u5ba1 + MP4 \u5bfc\u51fa \u00b7 Agent-agnostic",
-    "stars": 5569,
-    "forks": 864,
-    "watchers": 5569,
+    "stars": 5578,
+    "forks": 865,
+    "watchers": 5578,
     "open_issues": 7,
     "primary_language": "HTML",
     "topics": [],
     "languages": {},
     "created_at": "2026-04-19T14:42:06Z",
-    "updated_at": "2026-04-24T09:22:46.584453",
+    "updated_at": "2026-04-24T09:35:00.047692",
     "pushed_at": "2026-04-21T16:13:41Z",
     "owner": {
       "login": "alchaincyf",
@@ -568,7 +408,7 @@
     "top_contributors": [],
     "age_days": 4,
     "activity_score": 98,
-    "fetched_at": "2026-04-24T09:22:46.498997"
+    "fetched_at": "2026-04-24T09:34:59.948922"
   },
   {
     "id": 1216173720,
@@ -576,16 +416,16 @@
     "full_name": "tw93/Kami",
     "repo_url": "https://github.com/tw93/Kami",
     "description": "\ud83d\udc69\u200d\ud83d\ude92 Good content deserves good paper.",
-    "stars": 2915,
+    "stars": 2916,
     "forks": 142,
-    "watchers": 2915,
+    "watchers": 2916,
     "open_issues": 0,
     "primary_language": "HTML",
     "topics": [],
     "languages": {},
     "created_at": "2026-04-20T16:35:19Z",
-    "updated_at": "2026-04-24T09:22:46.624377",
-    "pushed_at": "2026-04-23T13:43:21Z",
+    "updated_at": "2026-04-24T09:35:00.099237",
+    "pushed_at": "2026-04-24T03:58:09Z",
     "owner": {
       "login": "tw93",
       "avatar_url": "https://avatars.githubusercontent.com/u/8736212?v=4",
@@ -599,7 +439,7 @@
     "top_contributors": [],
     "age_days": 3,
     "activity_score": 100,
-    "fetched_at": "2026-04-24T09:22:46.498997"
+    "fetched_at": "2026-04-24T09:34:59.948922"
   },
   {
     "id": 1214290850,
@@ -607,9 +447,9 @@
     "full_name": "EvoLinkAI/awesome-gpt-image-2-prompts",
     "repo_url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
     "description": "Curated GPT-Image-2 prompts fot the Openai API\uff1aimage examples across portraits, posters, UI mockups, character sheets, and community experiments.",
-    "stars": 2868,
+    "stars": 2876,
     "forks": 259,
-    "watchers": 2868,
+    "watchers": 2876,
     "open_issues": 6,
     "primary_language": "Python",
     "topics": [
@@ -631,7 +471,7 @@
     ],
     "languages": {},
     "created_at": "2026-04-18T11:22:14Z",
-    "updated_at": "2026-04-24T09:22:46.669903",
+    "updated_at": "2026-04-24T09:35:00.149443",
     "pushed_at": "2026-04-23T15:30:15Z",
     "owner": {
       "login": "EvoLinkAI",
@@ -646,7 +486,7 @@
     "top_contributors": [],
     "age_days": 5,
     "activity_score": 100,
-    "fetched_at": "2026-04-24T09:22:46.498997"
+    "fetched_at": "2026-04-24T09:34:59.948922"
   },
   {
     "id": 1212769188,
@@ -685,9 +525,9 @@
     "full_name": "OpenCoworkAI/open-codesign",
     "repo_url": "https://github.com/OpenCoworkAI/open-codesign",
     "description": "Open-source Claude Design alternative. One-click import your Claude Code / Codex API key. Prompt \u2192 prototype / slides / PDF. Multi-model (Claude, GPT, Gemini, Kimi, GLM, Ollama). BYOK, local-first, MIT.",
-    "stars": 1945,
+    "stars": 1948,
     "forks": 147,
-    "watchers": 1945,
+    "watchers": 1948,
     "open_issues": 48,
     "primary_language": "TypeScript",
     "topics": [
@@ -714,7 +554,7 @@
     ],
     "languages": {},
     "created_at": "2026-04-18T03:14:33Z",
-    "updated_at": "2026-04-24T09:22:46.724527",
+    "updated_at": "2026-04-24T09:35:00.188000",
     "pushed_at": "2026-04-23T17:29:28Z",
     "owner": {
       "login": "OpenCoworkAI",
@@ -729,7 +569,7 @@
     "top_contributors": [],
     "age_days": 6,
     "activity_score": 100,
-    "fetched_at": "2026-04-24T09:22:46.498997"
+    "fetched_at": "2026-04-24T09:34:59.948922"
   },
   {
     "id": 1214125715,
@@ -737,9 +577,9 @@
     "full_name": "VoltAgent/awesome-claude-design",
     "repo_url": "https://github.com/VoltAgent/awesome-claude-design",
     "description": "Awesome Claude Design: 68 ready-to-use design system inspirations in DESIGN.md format. Drop one in, scaffold a full UI in one shot.",
-    "stars": 1416,
+    "stars": 1418,
     "forks": 149,
-    "watchers": 1416,
+    "watchers": 1418,
     "open_issues": 1,
     "primary_language": null,
     "topics": [
@@ -751,7 +591,7 @@
     ],
     "languages": {},
     "created_at": "2026-04-18T06:40:04Z",
-    "updated_at": "2026-04-24T09:22:46.791649",
+    "updated_at": "2026-04-24T09:35:00.227000",
     "pushed_at": "2026-04-18T12:41:05Z",
     "owner": {
       "login": "VoltAgent",
@@ -766,6 +606,277 @@
     "top_contributors": [],
     "age_days": 5,
     "activity_score": 95,
-    "fetched_at": "2026-04-24T09:22:46.498997"
+    "fetched_at": "2026-04-24T09:34:59.948922"
+  },
+  {
+    "id": 537603333,
+    "repo_name": "whisper",
+    "full_name": "openai/whisper",
+    "repo_url": "https://github.com/openai/whisper",
+    "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "stars": 98280,
+    "forks": 12086,
+    "watchers": 98280,
+    "open_issues": 121,
+    "primary_language": "Python",
+    "topics": [],
+    "languages": {
+      "Python": 159343
+    },
+    "created_at": "2022-09-16T20:02:54Z",
+    "updated_at": "2026-04-24T09:34:35.500097",
+    "pushed_at": "2026-04-15T16:32:15Z",
+    "owner": {
+      "login": "openai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14957082?v=4",
+      "type": "Organization"
+    },
+    "size": 4132,
+    "default_branch": "main",
+    "has_wiki": false,
+    "has_issues": false,
+    "license": "MIT License",
+    "top_contributors": [
+      {
+        "login": "jongwook",
+        "id": 266841,
+        "node_id": "MDQ6VXNlcjI2Njg0MQ==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/266841?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jongwook",
+        "html_url": "https://github.com/jongwook",
+        "followers_url": "https://api.github.com/users/jongwook/followers",
+        "following_url": "https://api.github.com/users/jongwook/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jongwook/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jongwook/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jongwook/subscriptions",
+        "organizations_url": "https://api.github.com/users/jongwook/orgs",
+        "repos_url": "https://api.github.com/users/jongwook/repos",
+        "events_url": "https://api.github.com/users/jongwook/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jongwook/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false,
+        "contributions": 72
+      },
+      {
+        "login": "cclauss",
+        "id": 3709715,
+        "node_id": "MDQ6VXNlcjM3MDk3MTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3709715?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/cclauss",
+        "html_url": "https://github.com/cclauss",
+        "followers_url": "https://api.github.com/users/cclauss/followers",
+        "following_url": "https://api.github.com/users/cclauss/following{/other_user}",
+        "gists_url": "https://api.github.com/users/cclauss/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/cclauss/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/cclauss/subscriptions",
+        "organizations_url": "https://api.github.com/users/cclauss/orgs",
+        "repos_url": "https://api.github.com/users/cclauss/repos",
+        "events_url": "https://api.github.com/users/cclauss/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/cclauss/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false,
+        "contributions": 6
+      },
+      {
+        "login": "ryanheise",
+        "id": 19899190,
+        "node_id": "MDQ6VXNlcjE5ODk5MTkw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19899190?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/ryanheise",
+        "html_url": "https://github.com/ryanheise",
+        "followers_url": "https://api.github.com/users/ryanheise/followers",
+        "following_url": "https://api.github.com/users/ryanheise/following{/other_user}",
+        "gists_url": "https://api.github.com/users/ryanheise/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/ryanheise/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/ryanheise/subscriptions",
+        "organizations_url": "https://api.github.com/users/ryanheise/orgs",
+        "repos_url": "https://api.github.com/users/ryanheise/repos",
+        "events_url": "https://api.github.com/users/ryanheise/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/ryanheise/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false,
+        "contributions": 4
+      },
+      {
+        "login": "EliEron",
+        "id": 22575945,
+        "node_id": "MDQ6VXNlcjIyNTc1OTQ1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/22575945?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/EliEron",
+        "html_url": "https://github.com/EliEron",
+        "followers_url": "https://api.github.com/users/EliEron/followers",
+        "following_url": "https://api.github.com/users/EliEron/following{/other_user}",
+        "gists_url": "https://api.github.com/users/EliEron/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/EliEron/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/EliEron/subscriptions",
+        "organizations_url": "https://api.github.com/users/EliEron/orgs",
+        "repos_url": "https://api.github.com/users/EliEron/repos",
+        "events_url": "https://api.github.com/users/EliEron/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/EliEron/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false,
+        "contributions": 2
+      },
+      {
+        "login": "guillaumekln",
+        "id": 4805513,
+        "node_id": "MDQ6VXNlcjQ4MDU1MTM=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/4805513?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/guillaumekln",
+        "html_url": "https://github.com/guillaumekln",
+        "followers_url": "https://api.github.com/users/guillaumekln/followers",
+        "following_url": "https://api.github.com/users/guillaumekln/following{/other_user}",
+        "gists_url": "https://api.github.com/users/guillaumekln/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/guillaumekln/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/guillaumekln/subscriptions",
+        "organizations_url": "https://api.github.com/users/guillaumekln/orgs",
+        "repos_url": "https://api.github.com/users/guillaumekln/repos",
+        "events_url": "https://api.github.com/users/guillaumekln/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/guillaumekln/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false,
+        "contributions": 2
+      }
+    ],
+    "age_days": 1315,
+    "activity_score": 92,
+    "fetched_at": "2026-04-24T09:34:24.002068",
+    "complete_analysis": {
+      "repo_info": {
+        "name": "whisper",
+        "url": "https://github.com/openai/whisper",
+        "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+        "stars": 98280,
+        "forks": 12086,
+        "language": "Python"
+      },
+      "ai_analysis": {
+        "technology_summary": "The whisper repository focuses on robust speech recognition using large-scale weak supervision. It likely utilizes Python for its implementation.",
+        "innovation_score": 75,
+        "technical_complexity": "Medium",
+        "scalability_potential": "High",
+        "key_strengths": [
+          "Large-scale weak supervision approach",
+          "Robust speech recognition capabilities",
+          "Active community support and engagement"
+        ],
+        "technical_risks": [
+          "Complexity in managing weak supervision data",
+          "Potential performance bottlenecks with large-scale data processing"
+        ],
+        "market_fit": "The technology addresses a growing need for robust speech recognition solutions, indicating a good market fit.",
+        "competitive_advantage": "The use of large-scale weak supervision sets it apart from traditional speech recognition approaches, potentially leading to more accurate and adaptable models.",
+        "recommendation": "Monitor",
+        "analyzed_by": "AI",
+        "model": "gpt-3.5-turbo",
+        "repo_name": "whisper"
+      },
+      "sentiment_analysis": {
+        "description_sentiment": {
+          "sentiment": "Negative",
+          "polarity": -0.375,
+          "subjectivity": 0.625,
+          "confidence": 37.5,
+          "enthusiasm_level": 36.25,
+          "positive_keywords_found": 1,
+          "negative_keywords_found": 0,
+          "word_count": 7,
+          "sentence_count": 1
+        },
+        "readme_sentiment": {
+          "sentiment": "Neutral",
+          "polarity": 0.0,
+          "subjectivity": 0.0,
+          "confidence": 0.0,
+          "enthusiasm_level": 50.0,
+          "positive_keywords_found": 0,
+          "negative_keywords_found": 0,
+          "word_count": 0,
+          "sentence_count": 0
+        },
+        "overall_sentiment": "Negative",
+        "overall_polarity": -0.188,
+        "sentiment_score": 40.62
+      },
+      "trend_analysis": {
+        "trend_score": 48.4,
+        "trending_categories": [],
+        "hot_keywords": [],
+        "growth_velocity": "Rapid",
+        "market_timing": "Late",
+        "is_trending": false,
+        "trend_strength": "Moderate"
+      },
+      "scoring": {
+        "final_score": 66.32,
+        "breakdown": {
+          "traction": 100,
+          "technology": 75,
+          "market": 40,
+          "trend": 48.4,
+          "sentiment": 40.62,
+          "risk": 70
+        },
+        "grade": "B-",
+        "recommendation": "Invest"
+      },
+      "recommendation": {
+        "repo_name": "whisper",
+        "repo_url": "https://github.com/openai/whisper",
+        "final_score": 66.32,
+        "grade": "B-",
+        "recommendation": "Invest",
+        "score_breakdown": {
+          "traction": 100,
+          "technology": 75,
+          "market": 40,
+          "trend": 48.4,
+          "sentiment": 40.62,
+          "risk": 70
+        },
+        "key_insights": [
+          "Strong community traction with 98,280 stars",
+          "Very active development (recently updated)",
+          "Mature project with established track record"
+        ],
+        "investment_thesis": "Promising investment opportunity. whisper shows solid performance in most areas. While there are some areas for improvement, the overall trajectory is positive. Recommended for investment with standard due diligence.",
+        "risks": [],
+        "opportunities": [
+          {
+            "type": "Rapid Growth",
+            "potential": "High",
+            "description": "High star velocity (74.7 stars/day)"
+          },
+          {
+            "type": "Community Engagement",
+            "potential": "Medium",
+            "description": "Strong community with 12086 forks"
+          }
+        ],
+        "next_steps": [
+          "Conduct additional due diligence",
+          "Review code quality in detail",
+          "Assess team/maintainer background",
+          "Evaluate competitive positioning",
+          "Monitor for 2-4 weeks before decision"
+        ]
+      },
+      "investment_memo": {
+        "memo": "\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    INVESTMENT MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nProject: whisper\nURL: https://github.com/openai/whisper\nDate: April 24, 2026\nAnalyst: AI Investment Analysis System\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEXECUTIVE SUMMARY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nThe whisper project presents a cutting-edge approach to speech recognition through leveraging large-scale weak supervision, achieving an impressive score of 66.32 out of 100. This innovative technology has the potential to revolutionize the way we interact with devices and opens up new possibilities for seamless communication. I recommend investing in whisper to be at the forefront of this game-changing advancement in speech recognition technology.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMARKET OPPORTUNITY\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n1. Target market size: The market for speech recognition technology is expected to reach $31.82 billion by 2025, with applications across various industries such as healthcare, automotive, retail, and consumer electronics.\n\n2. Market trends: The increasing adoption of AI-powered voice assistants, advancements in natural language processing, and the growing demand for hands-free and voice-controlled devices are driving the growth of the speech recognition market.\n\n3. Competitive landscape: Major players in the speech recognition market include Google, Amazon, Microsoft, and IBM, with a focus on improving accuracy, speed, and language support. Startups like whisper leveraging large-scale weak supervision techniques could potentially disrupt the market with more robust and accurate speech recognition solutions.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nPRODUCT & TECHNOLOGY ASSESSMENT\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n1. Technology stack: Python is a widely-used and versatile programming language with a rich ecosystem of libraries and frameworks that can support the development of a robust speech recognition system.\n2. Innovation level: Leveraging large-scale weak supervision for speech recognition is innovative as it allows for training models with minimal human-labeled data, potentially reducing the time and cost associated with traditional supervised learning approaches.\n3. Technical advantages: The use of large-scale weak supervision can lead to improved model performance by leveraging a vast amount of unlabeled or weakly labeled data, making the system more scalable and adaptable to different languages and dialects.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTRACTION & METRICS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nTraction Metrics:\n- GitHub Stars: 98,280\n- Forks: 12,086\n- Age: 1315 days\n- Star Velocity: 74.74 stars/day\n- Community Engagement: High\n\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nINVESTMENT THESIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nInvestment Thesis: whisper has demonstrated exceptional traction with a perfect score of 100/100, indicating strong user adoption and market demand. The project's technology score of 75/100 suggests a solid foundation for continued innovation and product development. With a focus on user engagement and technological advancement, whisper presents a compelling investment opportunity in the tech space, poised for growth and success in the long term.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRISK ANALYSIS\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nKey Risks:\n- Standard market and execution risks\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nSCORING BREAKDOWN\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nTraction: 100/100\nTechnology: 75/100\nMarket: 40/100\nTrend: 48.4/100\nSentiment: 40.62/100\nRisk: 70/100\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRECOMMENDATION\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\nFinal Recommendation: Invest\nGrade: B-\nConviction Score: 66.32/100\n\nAction: CONSIDER investment after additional due diligence.\n\n\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n                    END OF MEMO\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n",
+        "conviction_score": 66.32,
+        "recommendation": "Invest",
+        "generated_at": "2026-04-24T09:34:35.475161"
+      }
+    }
   }
 ]

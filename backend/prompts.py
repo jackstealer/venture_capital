@@ -12,32 +12,42 @@ class PromptTemplates:
         """
         Prompt for analyzing repository technology and potential
         """
+        schema = {
+            "technology_summary": "string",
+            "innovation_score": 75,
+            "technical_complexity": "Medium",
+            "scalability_potential": "High",
+            "key_strengths": ["strength1", "strength2"],
+            "technical_risks": ["risk1", "risk2"],
+            "market_fit": "string",
+            "competitive_advantage": "string",
+            "recommendation": "Monitor"
+        }
+        
         return f"""You are an expert venture capital analyst specializing in technology evaluation.
 
 Analyze this GitHub repository and provide a comprehensive technical assessment:
 
 Repository: {repo_data.get('repo_name')}
-Description: {repo_data.get('description')}
-Stars: {repo_data.get('stars')}
-Forks: {repo_data.get('forks')}
-Primary Language: {repo_data.get('primary_language')}
-Topics: {', '.join(repo_data.get('topics', []))}
-Age: {repo_data.get('age_days')} days
+Description: {repo_data.get('description', 'No description')}
+Stars: {repo_data.get('stars', 0)}
+Forks: {repo_data.get('forks', 0)}
+Primary Language: {repo_data.get('primary_language', 'Unknown')}
+Topics: {', '.join(repo_data.get('topics', [])) or 'None'}
+Age: {repo_data.get('age_days', 0)} days
 
-Provide your analysis in the following JSON format:
+Provide your analysis in EXACTLY this JSON format (no extra text):
 {{
     "technology_summary": "Brief overview of the technology stack and architecture",
-    "innovation_score": 0-100,
-    "technical_complexity": "Low/Medium/High",
-    "scalability_potential": "Low/Medium/High",
+    "innovation_score": 75,
+    "technical_complexity": "Medium",
+    "scalability_potential": "High",
     "key_strengths": ["strength1", "strength2", "strength3"],
     "technical_risks": ["risk1", "risk2"],
     "market_fit": "Assessment of product-market fit",
     "competitive_advantage": "What makes this unique",
-    "recommendation": "Invest/Pass/Monitor"
-}}
-
-Analysis:"""
+    "recommendation": "Monitor"
+}}"""
     
     @staticmethod
     def investment_memo_prompt(analysis_data):
@@ -73,19 +83,17 @@ Format as a clear, professional memo."""
         """
         return f"""Analyze the sentiment and tone of this project description:
 
-"{text}"
+"{text or 'No description provided'}"
 
-Provide analysis in JSON format:
+Provide analysis in EXACTLY this JSON format (no extra text):
 {{
-    "sentiment": "Positive/Neutral/Negative",
-    "confidence": 0-100,
-    "key_emotions": ["emotion1", "emotion2"],
-    "enthusiasm_level": 0-100,
-    "professionalism_score": 0-100,
+    "sentiment": "Positive",
+    "confidence": 80,
+    "key_emotions": ["enthusiasm", "innovation"],
+    "enthusiasm_level": 75,
+    "professionalism_score": 85,
     "market_positioning": "How the project positions itself"
-}}
-
-Analysis:"""
+}}"""
     
     @staticmethod
     def trend_detection_prompt(repo_data, market_context):
@@ -97,25 +105,23 @@ Analysis:"""
 Evaluate if this project aligns with current technology trends:
 
 Project: {repo_data.get('repo_name')}
-Description: {repo_data.get('description')}
-Technology: {repo_data.get('primary_language')}
-Topics: {', '.join(repo_data.get('topics', []))}
+Description: {repo_data.get('description', 'No description')}
+Technology: {repo_data.get('primary_language', 'Unknown')}
+Topics: {', '.join(repo_data.get('topics', [])) or 'None'}
 
 Current Market Context:
 {market_context}
 
-Provide trend analysis in JSON format:
+Provide trend analysis in EXACTLY this JSON format (no extra text):
 {{
-    "trend_alignment": 0-100,
-    "trending_categories": ["AI/ML", "Web3", "DevTools", etc.],
-    "market_timing": "Early/Peak/Late",
-    "growth_potential": 0-100,
-    "trend_sustainability": "Short-term/Medium-term/Long-term",
+    "trend_alignment": 75,
+    "trending_categories": ["AI/ML", "DevTools"],
+    "market_timing": "Peak",
+    "growth_potential": 80,
+    "trend_sustainability": "Long-term",
     "competitive_landscape": "Description of competition",
-    "recommendation": "Strong Buy/Buy/Hold/Pass"
-}}
-
-Analysis:"""
+    "recommendation": "Buy"
+}}"""
     
     @staticmethod
     def code_quality_prompt(readme_content, language):
@@ -185,23 +191,21 @@ Analysis:"""
         return f"""As a venture capital risk analyst, identify potential risks for this investment:
 
 Project: {repo_data.get('repo_name')}
-Description: {repo_data.get('description')}
-Age: {repo_data.get('age_days')} days
-Activity: Last updated {repo_data.get('updated_at')}
-License: {repo_data.get('license')}
+Description: {repo_data.get('description', 'No description')}
+Age: {repo_data.get('age_days', 0)} days
+Activity: Last updated {repo_data.get('updated_at', 'Unknown')}
+License: {repo_data.get('license', 'Unknown')}
 
-Identify risks in JSON format:
+Identify risks in EXACTLY this JSON format (no extra text):
 {{
     "technical_risks": ["risk1", "risk2"],
     "market_risks": ["risk1", "risk2"],
     "execution_risks": ["risk1", "risk2"],
     "competitive_risks": ["risk1", "risk2"],
-    "overall_risk_level": "Low/Medium/High",
-    "risk_score": 0-100,
+    "overall_risk_level": "Medium",
+    "risk_score": 60,
     "mitigation_strategies": ["strategy1", "strategy2"]
-}}
-
-Risk Assessment:"""
+}}"""
     
     @staticmethod
     def market_sizing_prompt(repo_data):
@@ -211,18 +215,16 @@ Risk Assessment:"""
         return f"""Estimate the total addressable market (TAM) for this project:
 
 Project: {repo_data.get('repo_name')}
-Description: {repo_data.get('description')}
-Category: {', '.join(repo_data.get('topics', []))}
+Description: {repo_data.get('description', 'No description')}
+Category: {', '.join(repo_data.get('topics', [])) or 'General'}
 
-Provide market analysis in JSON:
+Provide market analysis in EXACTLY this JSON format (no extra text):
 {{
-    "tam_estimate": "Dollar amount or range",
+    "tam_estimate": "$100M - $500M",
     "target_market": "Description of target users",
-    "market_growth_rate": "Percentage",
-    "market_maturity": "Emerging/Growing/Mature",
+    "market_growth_rate": "15%",
+    "market_maturity": "Growing",
     "addressable_segment": "Specific segment this targets",
-    "monetization_potential": 0-100,
-    "market_size_score": 0-100
-}}
-
-Market Analysis:"""
+    "monetization_potential": 70,
+    "market_size_score": 75
+}}"""

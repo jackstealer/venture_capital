@@ -114,7 +114,8 @@ class ScoringEngine:
         
         # Fallback: estimate from topics
         topics = repo_data.get('topics', [])
-        description = repo_data.get('description', '').lower()
+        description = repo_data.get('description', '') or ''
+        description = description.lower()
         
         # Large market keywords
         large_market_keywords = ['ai', 'cloud', 'data', 'security', 'mobile', 'web']

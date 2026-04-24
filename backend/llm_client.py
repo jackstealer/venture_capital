@@ -61,27 +61,22 @@ class LLMClient:
     
     def _generate_grok(self, prompt, temperature, max_tokens):
         """Generate using Grok API (OpenAI-compatible)"""
-        # Try multiple possible Grok model names
-        models_to_try = ['grok-beta', 'grok-2-latest', 'grok-2', 'grok-1']
-        
-        for model in models_to_try:
-            try:
-                response = self.client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=temperature,
-                    max_tokens=max_tokens
-                )
-                return response.choices[0].message.content
-            except Exception as e:
-                error_msg = str(e)
-                print(f"Grok API error with {model}: {error_msg}")
-                if model == models_to_try[-1]:  # Last model
-                    return f"Error: All Grok models failed. Last error: {error_msg}"
-                continue  # Try next model
+        try:
+            response = self.client.chat.completions.create(
+                model="grok-beta",  # Use the standard Grok model
+                messages=[
+                    {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            error_msg = str(e)
+            print(f"Grok API error: {error_msg}")
+            # Return a helpful error message instead of trying other models
+            return f"Error: Grok API failed - {error_msg}. Please check API key and model availability."
     
     def _generate_gemini(self, prompt, temperature):
         """Generate using Google Gemini with new API"""

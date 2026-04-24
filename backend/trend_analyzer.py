@@ -39,9 +39,10 @@ class TrendAnalyzer:
         Returns:
             dict: Trend analysis
         """
-        description = repo_data.get('description', '').lower()
-        topics = [t.lower() for t in repo_data.get('topics', [])]
-        language = repo_data.get('primary_language', '').lower()
+        description = repo_data.get('description', '') or ''
+        description = description.lower()
+        topics = [t.lower() for t in repo_data.get('topics', []) if t]
+        language = (repo_data.get('primary_language', '') or '').lower()
         
         # Detect categories
         detected_categories = self._detect_categories(description, topics)
@@ -117,8 +118,9 @@ class TrendAnalyzer:
         score += (activity_score / 100) * 20
         
         # Hot keywords (20 points)
-        description = repo_data.get('description', '').lower()
-        topics = [t.lower() for t in repo_data.get('topics', [])]
+        description = repo_data.get('description', '') or ''
+        description = description.lower()
+        topics = [t.lower() for t in repo_data.get('topics', []) if t]
         hot_found = self._find_hot_keywords(description, topics)
         score += min(20, len(hot_found) * 5)
         

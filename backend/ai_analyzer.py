@@ -82,6 +82,8 @@ class AIAnalyzer:
     
     def _extract_recommendation(self, memo_text):
         """Extract recommendation from memo text"""
+        if not memo_text:
+            return 'Monitor'
         memo_lower = memo_text.lower()
         if 'strong buy' in memo_lower or 'highly recommend' in memo_lower:
             return 'Invest'

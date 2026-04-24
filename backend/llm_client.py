@@ -23,7 +23,8 @@ class LLMClient:
         if provider == 'gemini':
             # Using new google.genai package
             self.client = genai.Client(api_key=Config.GEMINI_API_KEY)
-            self.model_id = 'gemini-1.5-flash'  # Stable working model
+            # Use models without version prefix for new API
+            self.model_id = 'gemini-1.5-flash-latest'  # Latest stable model
         elif provider == 'openai':
             import openai
             openai.api_key = Config.OPENAI_API_KEY
@@ -50,33 +51,31 @@ class LLMClient:
     
     def _generate_gemini(self, prompt, temperature):
         """Generate using Google Gemini with new API"""
-        try:
-            response = self.client.models.generate_content(
-                model=self.model_id,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=temperature,
-                    top_p=0.95,
-                    top_k=40,
-                    max_output_tokens=2048,
-                )
-            )
-            return response.text
-        except Exception as e:
-            print(f"Gemini API error: {e}")
-            # Fallback to gemini-pro if flash-exp not available
+        # Try multiple models in order of preference
+        models_to_try = [
+            'gemini-1.5-flash-latest',
+            'gemini-1.5-pro-latest',
+            'gemini-pro'
+        ]
+        
+        for model in models_to_try:
             try:
                 response = self.client.models.generate_content(
-                    model='gemini-pro',
+                    model=model,
                     contents=prompt,
                     config=types.GenerateContentConfig(
                         temperature=temperature,
+                        top_p=0.95,
+                        top_k=40,
                         max_output_tokens=2048,
                     )
                 )
                 return response.text
-            except Exception as e2:
-                return f"Error: {str(e2)}"
+            except Exception as e:
+                print(f"Gemini API error with {model}: {e}")
+                if model == models_to_try[-1]:  # Last model
+                    return f"Error: All Gemini models failed. {str(e)}"
+                continue  # Try next model
     
     def _generate_openai(self, prompt, temperature, max_tokens):
         """Generate using OpenAI GPT"""

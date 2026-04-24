@@ -29,8 +29,9 @@ Venture Scout automates the investment analysis process using:
 
 - Comprehensive evaluation of code quality and architecture
 - Technology stack assessment
-- Innovation scoring using Google Gemini AI
+- Innovation scoring using OpenRouter API (GPT-3.5-Turbo)
 - Scalability and complexity analysis
+- Automatic fallback to multiple AI models for reliability
 
 ### 2. Sentiment Analysis
 
@@ -96,7 +97,11 @@ Venture Scout automates the investment analysis process using:
      ▼         ▼          ▼          ▼          ▼
 ┌──────────────────────────────────────────────────────────┐
 │              EXTERNAL SERVICES & DATA                     │
-│  • Google Gemini API (LLM)                               │
+│  • OpenRouter API (Multi-model LLM access)               │
+│    - GPT-3.5-Turbo (Primary)                             │
+│    - Claude Haiku (Fallback)                             │
+│    - Gemini Pro (Fallback)                               │
+│    - Llama 3 (Fallback)                                  │
 │  • GitHub REST API (Repository Data)                     │
 │  • TextBlob/NLTK (NLP Processing)                        │
 │  • JSON Database (Local Storage)                         │
@@ -110,7 +115,8 @@ Venture Scout automates the investment analysis process using:
 - **Framework**: Flask 3.1.3
 - **Language**: Python 3.8+
 - **AI/ML Libraries**:
-  - google-generativeai 0.8.6 (Gemini AI)
+  - openai 1.59.5 (OpenRouter API integration)
+  - google-generativeai 0.8.6 (Gemini AI - optional)
   - textblob 0.20.0 (Sentiment Analysis)
   - nltk 3.9.4 (Natural Language Processing)
 - **Data Processing**: requests, python-dotenv
@@ -125,10 +131,11 @@ Venture Scout automates the investment analysis process using:
 
 ### APIs & Services
 
-- **Google Gemini API**: LLM-powered analysis
+- **OpenRouter API**: Multi-model LLM access (GPT-3.5-Turbo, Claude, Gemini, Llama)
 - **GitHub REST API**: Repository data fetching
 - **TextBlob**: Sentiment analysis
 - **NLTK**: Text processing
+- **Automatic Fallback**: Multiple AI models for high reliability
 
 ## 📦 Installation & Setup
 
@@ -137,7 +144,7 @@ Venture Scout automates the investment analysis process using:
 ```bash
 - Python 3.8 or higher
 - pip (Python package manager)
-- Google Gemini API key (free tier available)
+- OpenRouter API key (provides access to multiple AI models)
 - GitHub token (optional, for higher rate limits)
 ```
 
@@ -172,16 +179,30 @@ python -m textblob.download_corpora
 Create a `.env` file in the `backend` directory:
 
 ```env
+# Primary AI Provider (OpenRouter - provides access to multiple models)
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+
+# Alternative AI Providers (optional)
+GROK_API_KEY=your_grok_api_key_here
 GEMINI_API_KEY=your_gemini_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+
+# GitHub API (optional, for higher rate limits)
 GITHUB_TOKEN=your_github_token_here
+
+# Application Settings
 DEBUG=True
 PORT=5000
+DATABASE_FILE=../data/projects.json
 ```
 
 **Get API Keys**:
 
-- Gemini API: https://makersuite.google.com/app/apikey (Free)
-- GitHub Token: https://github.com/settings/tokens (Optional)
+- OpenRouter API: https://openrouter.ai/ (Access to GPT-3.5, Claude, Gemini, Llama)
+- Grok API: https://x.ai/ (Optional - X.AI's Grok models)
+- Gemini API: https://makersuite.google.com/app/apikey (Optional - Google's Gemini)
+- OpenAI API: https://platform.openai.com/api-keys (Optional - Direct OpenAI access)
+- GitHub Token: https://github.com/settings/tokens (Optional - Higher rate limits)
 
 ### Step 4: Run the Application
 
@@ -289,40 +310,50 @@ Request:
 
 ### 1. Large Language Models (LLMs)
 
-- Integration with Google Gemini API
+- Multi-provider LLM integration (OpenRouter, Grok, Gemini, OpenAI)
+- Automatic model fallback for high reliability
 - Prompt engineering for specific tasks
-- Structured output generation
-- Context-aware analysis
+- Structured JSON output generation
+- Context-aware analysis with temperature control
 
-### 2. Prompt Engineering
+### 2. AI Reliability & Error Handling
+
+- **Automatic Model Fallback**: If primary model fails, automatically tries backup models
+- **Graceful Degradation**: Returns meaningful defaults when all models fail
+- **Retry Logic**: Intelligent retry with different models
+- **Error Recovery**: Comprehensive error handling and logging
+- **Model Selection**: Chooses best available model based on task requirements
+
+### 3. Prompt Engineering
 
 - Task-specific prompt templates
-- Few-shot learning examples
+- Explicit JSON schema examples
 - Output format specification
 - Temperature and token control
+- Context injection for better results
 
-### 3. Natural Language Processing
+### 4. Natural Language Processing
 
 - Sentiment analysis (polarity, subjectivity)
 - Text preprocessing and tokenization
 - Keyword extraction
 - Entity recognition
 
-### 4. Machine Learning
+### 5. Machine Learning
 
 - Multi-factor scoring algorithms
 - Weighted decision models
 - Pattern recognition
 - Predictive analytics
 
-### 5. AI Agents
+### 6. AI Agents
 
 - Autonomous analysis workflows
 - Multi-step reasoning
 - Decision-making systems
 - Recommendation generation
 
-### 6. Automated Content Generation
+### 7. Automated Content Generation
 
 - Professional report writing
 - Context-aware summaries
@@ -366,7 +397,8 @@ Factors:
 
 ### Technical Improvements
 
-- [ ] Add more LLM providers (Claude, GPT-4)
+- [x] Multi-provider LLM support (OpenRouter, Grok, Gemini, OpenAI)
+- [x] Automatic model fallback for reliability
 - [ ] Implement caching for faster responses
 - [ ] Add MongoDB for scalable data storage
 - [ ] Real-time WebSocket updates
@@ -394,24 +426,24 @@ Factors:
 ```
 venture-scout/
 ├── backend/                    # Python backend
-│   ├── ai_analyzer.py         # AI analysis 
-│   ├── llm_client.py          # LLM integration 
-│   ├── prompts.py             # Prompt templates 
-│   ├── config.py              # Configuration 
-│   ├── sentiment_analyzer.py  # Sentiment analysis 
-│   ├── trend_analyzer.py      # Trend detection 
-│   ├── data_collector.py      # Data collection 
-│   ├── github_api.py          # GitHub API 
-│   ├── data_processor.py      # Data processing 
-│   ├── text_processor.py      # Text processing 
-│   ├── scoring_engine.py      # Scoring system 
-│   ├── recommendation_engine.py # Recommendations 
-│   ├── memo_generator.py      # Memo generation 
+│   ├── ai_analyzer.py         # AI analysis
+│   ├── llm_client.py          # LLM integration
+│   ├── prompts.py             # Prompt templates
+│   ├── config.py              # Configuration
+│   ├── sentiment_analyzer.py  # Sentiment analysis
+│   ├── trend_analyzer.py      # Trend detection
+│   ├── data_collector.py      # Data collection
+│   ├── github_api.py          # GitHub API
+│   ├── data_processor.py      # Data processing
+│   ├── text_processor.py      # Text processing
+│   ├── scoring_engine.py      # Scoring system
+│   ├── recommendation_engine.py # Recommendations
+│   ├── memo_generator.py      # Memo generation
 │   ├── app.py                 # Flask API
 │   ├── database.py            # Data storage
 │   ├── requirements.txt       # Dependencies
 │   └── .env                   # Environment variables
-├── frontend/                   # Frontend 
+├── frontend/                   # Frontend
 │   ├── index.html             # Main page
 │   ├── styles.css             # Styling
 │   ├── app.js                 # Application logic
@@ -434,7 +466,10 @@ MIT License - Feel free to use this project for educational purposes.
 
 ## 🙏 Acknowledgments
 
+- OpenRouter for multi-model LLM access
+- OpenAI for GPT models
 - Google Gemini AI for LLM capabilities
+- X.AI for Grok models
 - GitHub for repository data API
 - TextBlob and NLTK for NLP tools
 - The open-source community

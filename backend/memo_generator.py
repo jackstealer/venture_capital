@@ -4,7 +4,7 @@ from datetime import datetime
 class MemoGenerator:
     
     def __init__(self):
-        self.llm = LLMClient(provider='grok')
+        self.llm = LLMClient(provider='openrouter')
     
     def generate_memo(self, repo_data, analysis_data, scoring_result):
         print(f"📝 Generating investment memo for {repo_data.get('repo_name')}...")

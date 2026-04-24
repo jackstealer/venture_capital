@@ -3,7 +3,7 @@ from prompts import PromptTemplates
 import json
 
 class AIAnalyzer:
-    def __init__(self, provider='grok'):
+    def __init__(self, provider='openrouter'):
         self.llm = LLMClient(provider=provider)
         self.prompts = PromptTemplates()
     
@@ -18,7 +18,7 @@ class AIAnalyzer:
         
         # Add metadata
         analysis['analyzed_by'] = 'AI'
-        analysis['model'] = 'grok-beta'  # Updated to match current provider
+        analysis['model'] = 'gemini-flash-1.5'  # OpenRouter model
         analysis['repo_name'] = repo_data.get('repo_name')
         
         return analysis

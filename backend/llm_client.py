@@ -1,5 +1,5 @@
 # LLM API Client
-# Wrapper for Grok, Gemini and OpenAI APIs
+# Wrapper for OpenRouter, Grok, Gemini and OpenAI APIs
 
 import os
 from openai import OpenAI
@@ -7,26 +7,34 @@ from config import Config
 
 class LLMClient:
     """
-    Unified client for LLM APIs (Grok/Gemini/OpenAI)
+    Unified client for LLM APIs (OpenRouter/Grok/Gemini/OpenAI)
     Handles API calls, prompt formatting, and response parsing
     """
     
-    def __init__(self, provider='grok'):
+    def __init__(self, provider='openrouter'):
         """
         Initialize LLM client
         Args:
-            provider (str): 'grok', 'gemini' or 'openai'
+            provider (str): 'openrouter', 'grok', 'gemini' or 'openai'
         """
         self.provider = provider
         
-        if provider == 'grok':
+        if provider == 'openrouter':
+            # OpenRouter provides access to multiple models
+            self.client = OpenAI(
+                api_key=Config.OPENROUTER_API_KEY,
+                base_url="https://openrouter.ai/api/v1"
+            )
+            # Using Google's Gemini via OpenRouter (free tier)
+            self.model_id = 'google/gemini-flash-1.5'
+        elif provider == 'grok':
             # Grok uses OpenAI-compatible API
             self.client = OpenAI(
                 api_key=Config.GROK_API_KEY,
                 base_url="https://api.x.ai/v1"
             )
-            # Try common Grok model names
-            self.model_id = 'grok-beta'  # Standard Grok model
+            # X.AI's actual model name
+            self.model_id = 'grok-2-latest'  # Correct X.AI model name
         elif provider == 'gemini':
             from google import genai
             from google.genai import types
@@ -49,21 +57,19 @@ class LLMClient:
             str: Generated text
         """
         try:
-            if self.provider == 'grok':
-                return self._generate_grok(prompt, temperature, max_tokens)
+            if self.provider in ['openrouter', 'grok', 'openai']:
+                return self._generate_openai_compatible(prompt, temperature, max_tokens)
             elif self.provider == 'gemini':
                 return self._generate_gemini(prompt, temperature)
-            elif self.provider == 'openai':
-                return self._generate_openai(prompt, temperature, max_tokens)
         except Exception as e:
             print(f"LLM generation error: {e}")
             return f"Error generating response: {str(e)}"
     
-    def _generate_grok(self, prompt, temperature, max_tokens):
-        """Generate using Grok API (OpenAI-compatible)"""
+    def _generate_openai_compatible(self, prompt, temperature, max_tokens):
+        """Generate using OpenAI-compatible API (OpenRouter, Grok, OpenAI)"""
         try:
             response = self.client.chat.completions.create(
-                model="grok-beta",  # Use the standard Grok model
+                model=self.model_id,
                 messages=[
                     {"role": "system", "content": "You are an expert venture capital analyst specializing in technology evaluation."},
                     {"role": "user", "content": prompt}
@@ -73,10 +79,8 @@ class LLMClient:
             )
             return response.choices[0].message.content
         except Exception as e:
-            error_msg = str(e)
-            print(f"Grok API error: {error_msg}")
-            # Return a helpful error message instead of trying other models
-            return f"Error: Grok API failed - {error_msg}. Please check API key and model availability."
+            print(f"{self.provider.upper()} API error: {e}")
+            return f"Error: {str(e)}"
     
     def _generate_gemini(self, prompt, temperature):
         """Generate using Google Gemini with new API"""
@@ -107,21 +111,8 @@ class LLMClient:
                 continue  # Try next model
     
     def _generate_openai(self, prompt, temperature, max_tokens):
-        """Generate using OpenAI GPT"""
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model_id,
-                messages=[
-                    {"role": "system", "content": "You are an expert venture capital analyst."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=temperature,
-                max_tokens=max_tokens
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            print(f"OpenAI API error: {e}")
-            return f"Error: {str(e)}"
+        """Generate using OpenAI GPT - kept for backwards compatibility"""
+        return self._generate_openai_compatible(prompt, temperature, max_tokens)
     
     def generate_structured(self, prompt, schema=None):
         """

@@ -72,29 +72,3 @@ class Database:
         """Write data to JSON file"""
         with open(self.db_file, 'w') as f:
             json.dump(data, f, indent=2)
-
-from pymongo import MongoClient
-import os
-from config import Config
-
-class Database:
-    def __init__(self):
-        mongo_uri = Config.MONGO_URI or os.getenv('MONGO_URI', '')
-        if not mongo_uri:
-            raise RuntimeError('MONGO_URI not configured. Set MONGO_URI in backend/.env or environment variables.')
-        self.client = MongoClient(mongo_uri)
-        self.db = self.client['venture_scout']
-        self.projects = self.db['projects']
-    
-    def save_project(self, project_data):
-        return self.projects.update_one(
-            {'id': project_data['id']},
-            {'$set': project_data},
-            upsert=True
-        )
-    
-    def get_project(self, project_id):
-        return self.projects.find_one({'id': project_id})
-    
-    def get_all_projects(self):
-        return list(self.projects.find())

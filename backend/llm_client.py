@@ -25,7 +25,7 @@ class LLMClient:
                 api_key=Config.GROK_API_KEY,
                 base_url="https://api.x.ai/v1"
             )
-            self.model_id = 'grok-beta'
+            self.model_id = 'grok-2-1212'  # Correct Grok model name
         elif provider == 'gemini':
             from google import genai
             from google.genai import types

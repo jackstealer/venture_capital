@@ -1,0 +1,35 @@
+# Core Framework
+flask
+flask-cors
+python-dotenv
+
+# LLM APIs
+openai
+google-genai
+
+# LangChain
+langchain
+langchain-google-genai
+
+# NLP
+nltk
+textblob
+
+# Transformers
+transformers
+torch
+
+# Data
+requests
+beautifulsoup4
+
+# DB
+pymongo
+
+# API
+fastapi
+uvicorn
+pydantic
+
+# Utils
+python-dateutil

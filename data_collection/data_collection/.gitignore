@@ -1,0 +1,23 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+.env
+
+# Environment Variables
+.env
+.env.local
+.env.*
+
+# Python automatically generated directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Project documentation (local only)
+PROJECT_IMPLEMENTATION_OVERVIEW.md

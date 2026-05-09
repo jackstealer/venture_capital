@@ -1,0 +1,74 @@
+import json
+import os
+from datetime import datetime
+
+class Database:  
+    def __init__(self, db_file='../data/projects.json'):
+        self.db_file = db_file
+        self._ensure_db_exists()
+    
+    def _ensure_db_exists(self):
+        """Create database file if it doesn't exist"""
+        os.makedirs(os.path.dirname(self.db_file), exist_ok=True)
+        if not os.path.exists(self.db_file):
+            with open(self.db_file, 'w') as f:
+                json.dump([], f)
+    
+    def save_project(self, project_data):
+        try:
+            projects = self._read_db()
+            
+            # Add timestamp
+            project_data['updated_at'] = datetime.now().isoformat()
+            
+            # Check if project already exists (by repo_id or url)
+            project_id = project_data.get('id') or project_data.get('repo_url')
+            existing_index = None
+            
+            for i, proj in enumerate(projects):
+                if proj.get('id') == project_id or proj.get('repo_url') == project_id:
+                    existing_index = i
+                    break
+            
+            if existing_index is not None:
+                # Update existing project
+                projects[existing_index] = project_data
+            else:
+                # Add new project
+                projects.append(project_data)
+            
+            self._write_db(projects)
+            return True
+        except Exception as e:
+            print(f"Error saving project: {e}")
+            return False
+    
+    def get_project(self, project_id):
+        projects = self._read_db()
+        for project in projects:
+            if str(project.get('id')) == str(project_id):
+                return project
+        return None
+    
+    def get_all_projects(self):
+        return self._read_db()
+    
+    def delete_project(self, project_id):
+        """Delete a project by ID"""
+        projects = self._read_db()
+        projects = [p for p in projects if str(p.get('id')) != str(project_id)]
+        self._write_db(projects)
+        return True
+    
+    def _read_db(self):
+        """Read data from JSON file"""
+        try:
+            with open(self.db_file, 'r') as f:
+                return json.load(f)
+        except:
+            return []
+    
+    def _write_db(self, data):
+        """Write data to JSON file"""
+        with open(self.db_file, 'w') as f:
+            json.dump(data, f, indent=2)

@@ -1,0 +1,7 @@
+pymongo[srv]
+dnspython
+pandas
+numpy
+textblob
+python-dotenv
+certifi
